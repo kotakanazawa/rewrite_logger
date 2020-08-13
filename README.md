@@ -1,24 +1,7 @@
-# README
+## サービス概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+「リライトロガー」は、「特定のキーワードの検索順位の変動を監視するのが面倒」という問題を解決したい、ブログ運営者向けの「検索順位監視ツール」です。
 
-Things you may want to cover:
+ユーザーは、「特定のキーワードの検索順位と記事URLを記録し、変更点についてのコメントを残せることが」できます。
+「特定のキーワードの順位が大きく変動した場合にメールで通知してくれる」のが特徴です。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
