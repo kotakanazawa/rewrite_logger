@@ -1,72 +1,77 @@
 version: 2.1
 
-jobs:
-  build:
+executors:
+  default:
+    working_directory: ~/rewrite_logger
     docker:
       - image: circleci/ruby:2.7.1-node-browsers
+        environment:
+          PGHOST: 127.0.0.1
+          PGUSER: rewrite_logger
+          PGPASSWORD: ""
+      - image: circleci/postgres:12.1-alpine
+        environment:
+          POSTGRES_USER: rewrite_logger
+          POSTGRES_DB: rewrite_logger_test
+          POSTGRES_PASSWORD: ""
 
-    working_directory: ~/my-apps/rewrite_logger
-
+commands:
+  setup:
     steps:
       - checkout
+      - run:
+          name: Update bundler
+          command: gem update bundler
+
+      - run:
+          name: Which bundler?
+          command: bundle -v
 
       - restore_cache:
           keys:
             - gem-cache-v1-{{ checksum "Gemfile.lock" }}
-            - gem-cache-v1
+            - gem-cache-v1-
 
       - run:
-          name: Install Bundle
-          command: gem install bundler
-
-      - run:
-          name: set bundle config path
-          command: bundle config set path "vendor/bundle"
-
-      - run:
-          name: set bundle config clean
-          command: bundle config set clean "true"
-
-      - run:
-          name: Install gems
-          command: bundle install
+          name: Bundle Install
+          command: bundle check || bundle install
 
       - save_cache:
-          key: gem-chace-v1-{{ checksum "Gemfile.lock" }}
+          key: gem-cache-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            - ./vendor/bundle
+            - vendor/bundle
 
       - restore_cache:
           keys:
-            - yarn-chace-v1-{{ checksum "yarn.lock" }}
-            - yarn-chace-v1-
+            - yarn-cache-v1-{{ checksum "yarn.lock" }}
+            - yarn-cache-v1-
 
       - run:
           name: Yarn Install
-          command: yarn install
+          command: yarn install --cache-folder ~/.cache/yarn
 
       - save_cache:
-          key: yarn-chace-v1-{{ checksum "yarn.lock" }}
+          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
 
+jobs:
+  test:
+    executor: default
+    environment:
+      RAILS_ENV: test
+    steps:
+      - checkout
+      - setup
       - run:
-          name: rubocop
-          command: bundle exec rubocop -c .rubocop.yml
+          name: Database setup
+          command: bin/rails db:schema:load
 
       - run:
-          name: Test
+          name: Rails Test
           command: bundle exec rspec
 
-      - store_test_results:
-          path: tmp/test-results
-      - store_artifacts:
-          path: tmp/screenshots
-          destination: screenshots
-
 workflows:
-  version: 2
-
-  workflow:
+  test:
     jobs:
-      - build
+      - test
