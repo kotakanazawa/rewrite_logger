@@ -16,6 +16,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 
 # not default
 gem "slim-rails"
+gem "pg"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
