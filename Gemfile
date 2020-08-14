@@ -17,6 +17,7 @@ gem "slim-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -27,10 +28,12 @@ group :development do
   gem "rubocop", require: false
   gem "rubocop-performance"
   gem "rubocop-rails"
+  gem "rubocop-rspec"
 end
 
 group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-rails", "~> 4.0.0"
 end
