@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rubocop -A
+bundle exec rubocop -A
