@@ -20,7 +20,6 @@ gem "pg"
 gem "rails-i18n"
 gem "devise"
 gem "devise-i18n"
-gem "html2slim"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
