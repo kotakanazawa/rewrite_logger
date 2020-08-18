@@ -18,7 +18,11 @@ ja:
       date_and_time: "%m月%d日%H:%M"
   activerecord:
     models:
+      users:
     attributes:
+      users:
+        username: ユーザーネーム
+        email: Eメール
   helpers:
     submit:
       create: 登録する
