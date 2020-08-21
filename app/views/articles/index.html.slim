@@ -3,7 +3,6 @@ h1 Listing articles
 table
   thead
     tr
-      th Title
       th Url
       th Keyword
       th
@@ -13,7 +12,6 @@ table
   tbody
     - @articles.each do |article|
       tr
-        td = article.title
         td = article.url
         td = article.keyword
         td = link_to 'Show', article
