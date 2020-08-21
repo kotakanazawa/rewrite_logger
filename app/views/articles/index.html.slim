@@ -16,7 +16,7 @@ table
         td = article.keyword
         td = link_to t("link.show"), article
         td = link_to t("link.edit"), edit_article_path(article)
-        td = link_to t("link.destroy"), article, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to t("link.destroy"), article, data: { confirm: t("confirm.are_you_sure") }, method: :delete
 
 br
 

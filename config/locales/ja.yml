@@ -23,7 +23,7 @@ ja:
     attributes:
       user:
         username: ユーザーネーム
-        email: Eメール
+        email: メールアドレス
       article:
         title: タイトル
         url: URL
@@ -39,3 +39,9 @@ ja:
     back: 戻る
     destroy: 削除
     new_article: 記事を登録する
+  success:
+    article_was_successfully_created: 記事を登録しました
+    article_was_successfully_updated: 記事を編集しました
+    article_was_successfully_destroyed: 記事を削除しました
+  confirm:
+    are_you_sure: 本当によろしいですか？
