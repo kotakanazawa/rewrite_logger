@@ -1,0 +1,11 @@
+h2 記事詳細
+
+h3= Article.human_attribute_name(:url)
+p= @article.url
+
+h3= Article.human_attribute_name(:keyword)
+p= @article.keyword
+
+=> link_to t("link.edit"), edit_article_path(@article)
+'|
+=< link_to t("link.back"), articles_path

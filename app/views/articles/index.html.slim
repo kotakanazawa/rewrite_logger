@@ -1,0 +1,23 @@
+h1 検索順位一覧
+
+table
+  thead
+    tr
+      th= Article.human_attribute_name(:url)
+      th= Article.human_attribute_name(:keyword)
+      th
+      th
+      th
+
+  tbody
+    - @articles.each do |article|
+      tr
+        td = article.url
+        td = article.keyword
+        td = link_to t("link.show"), article
+        td = link_to t("link.edit"), edit_article_path(article)
+        td = link_to t("link.destroy"), article, data: { confirm: t("confirm.are_you_sure") }, method: :delete
+
+br
+
+= link_to t("link.new_article"), new_article_path
