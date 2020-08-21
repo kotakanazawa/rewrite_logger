@@ -1,10 +1,10 @@
-h1 Listing articles
+h1 検索順位一覧
 
 table
   thead
     tr
-      th Url
-      th Keyword
+      th= Article.human_attribute_name(:url)
+      th= Article.human_attribute_name(:keyword)
       th
       th
       th
