@@ -6,6 +6,6 @@ p= @article.url
 h3= Article.human_attribute_name(:keyword)
 p= @article.keyword
 
-=> link_to 'Edit', edit_article_path(@article)
+=> link_to t("link.edit"), edit_article_path(@article)
 '|
-=< link_to 'Back', articles_path
+=< link_to t("link.back"), articles_path

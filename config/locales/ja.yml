@@ -32,3 +32,10 @@ ja:
     submit:
       create: 登録する
       update: 更新する
+      submit: 保存する
+  link:
+    edit: 編集
+    show: 詳細
+    back: 戻る
+    destroy: 削除
+    new_article: 記事を登録する
