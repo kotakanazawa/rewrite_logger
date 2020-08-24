@@ -15,7 +15,7 @@ table
       th = Article.human_attribute_name(:keyword)
       - @articles.each do |article|
         - article.rankings.each do |ranking|
-          th = ranking.ranked_on
+          th = l(ranking.ranked_on, format: :sm)
       th
       th
       th
