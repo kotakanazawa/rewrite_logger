@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = current_user.articles
+    @today = Time.current.to_date
+    @prev_month = Time.current.prev_month.to_date
   end
 
   def show

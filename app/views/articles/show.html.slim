@@ -6,6 +6,15 @@ p= @article.url
 h3= Article.human_attribute_name(:keyword)
 p= @article.keyword
 
+h2 検索順位
+
+- @article.rankings.each do |ranking|
+  li
+    | 日付
+    = ranking.ranked_on
+    | 順位
+    = ranking.ranking
+
 => link_to t("link.edit"), edit_article_path(@article)
 '|
 =< link_to t("link.back"), articles_path

@@ -1,22 +1,30 @@
 h1 検索順位一覧
 
+p
+  | email:
+  = current_user.email
+p
+  | user_id:
+  = current_user.id
+
 table
   thead
     tr
-      th= Article.human_attribute_name(:url)
-      th= Article.human_attribute_name(:keyword)
-      th
-      th
-      th
+      th = Article.human_attribute_name(:id)
+      th = Article.human_attribute_name(:keyword)
+      - (@prev_month..@today).each do |date|
+        th = date
 
   tbody
-    - @articles.each do |article|
-      tr
-        td = article.url
-        td = article.keyword
-        td = link_to t("link.show"), article
-        td = link_to t("link.edit"), edit_article_path(article)
-        td = link_to t("link.destroy"), article, data: { confirm: t("confirm.are_you_sure") }, method: :delete
+      - @articles.each do |article|
+        tr
+          td = article.id
+          td = article.keyword
+          - (@prev_month..@today).each do |date|
+            - if article.has_ranking?(date)
+              td = article.fetch_ranking(date)
+            - else
+              td = "-"
 
 br
 

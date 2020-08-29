@@ -20,6 +20,7 @@ ja:
     models:
       user: ユーザー
       article: 記事
+      ranking: 検索順位
     attributes:
       user:
         username: ユーザーネーム
@@ -28,6 +29,9 @@ ja:
         title: タイトル
         url: URL
         keyword: キーワード
+      ranking:
+        ranking: 順位
+        ranked_on: 日付
   helpers:
     submit:
       create: 登録する
