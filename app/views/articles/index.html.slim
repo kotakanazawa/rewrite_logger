@@ -11,26 +11,20 @@ table
   thead
     tr
       th = Article.human_attribute_name(:id)
-      th = Article.human_attribute_name(:url)
       th = Article.human_attribute_name(:keyword)
-      - @articles.each do |article|
-        - article.rankings.each do |ranking|
-          th = l(ranking.ranked_on, format: :sm)
-      th
-      th
-      th
+      - dates.each do |date|
+        th = date
 
   tbody
-    - @articles.each do |article|
-      tr
-        td = article.id
-        td = article.url
-        td = article.keyword
-        - article.rankings.each do |ranking|
-          td = ranking.ranking
-        td = link_to t("link.show"), article
-        td = link_to t("link.edit"), edit_article_path(article)
-        td = link_to t("link.destroy"), article, data: { confirm: t("confirm.are_you_sure") }, method: :delete
+      - @articles.each do |article|
+        tr
+          td = article.id
+          td = article.keyword
+          - dates.each do |date|
+            - if article.has_ranking?(date)
+              td = article.fetch_ranking(date)
+            - else
+              td = "-"
 
 br
 
