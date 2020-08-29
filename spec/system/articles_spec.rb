@@ -3,8 +3,8 @@
 require "rails_helper"
 
 RSpec.describe "記事管理", type: :system do
-  let(:user_a) { FactoryBot.create(:user, username: "ユーザーA", email: "a@example.com") }
-  let(:user_b) { FactoryBot.create(:user, username: "ユーザーB", email: "b@example.com") }
+  let(:user_a) { FactoryBot.create(:user, name: "ユーザーA", email: "a@example.com") }
+  let(:user_b) { FactoryBot.create(:user, name: "ユーザーB", email: "b@example.com") }
   let!(:article_a) { FactoryBot.create(:article, url: "test_url", keyword: "テストキーワード", user: user_a) }
 
   before do
@@ -18,8 +18,7 @@ RSpec.describe "記事管理", type: :system do
     context "ユーザーAがログインしているとき" do
       let(:login_user) { user_a }
 
-      it "ユーザーAが作成したURLとキーワードが表示される" do
-        expect(page).to have_content "test_url"
+      it "ユーザーAが作成したキーワードが表示される" do
         expect(page).to have_content "テストキーワード"
       end
     end
@@ -28,7 +27,6 @@ RSpec.describe "記事管理", type: :system do
       let(:login_user) { user_b }
 
       it "ユーザーAが登録した記事が表示されない" do
-        expect(page).to have_no_content "test_url"
         expect(page).to have_no_content "テストキーワード"
       end
     end
@@ -42,7 +40,7 @@ RSpec.describe "記事管理", type: :system do
         visit article_path(article_a)
       end
 
-      it "ユーザーAが作成したURLとキーワードが表示される" do
+      it "ユーザーAが作成したキーワードが表示される" do
         expect(page).to have_content "test_url"
         expect(page).to have_content "テストキーワード"
       end
@@ -81,19 +79,4 @@ RSpec.describe "記事管理", type: :system do
         end
       end
     end
-
-  describe "記事削除" do
-    let(:login_user) { user_a }
-
-    before do
-      visit articles_path
-      page.accept_confirm do
-        first("tbody tr").click_link "削除"
-      end
-    end
-
-    it "正常に削除される" do
-      expect(page).to have_content "記事を削除しました"
-    end
-  end
 end
