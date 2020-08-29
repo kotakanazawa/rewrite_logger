@@ -12,7 +12,7 @@ table
     tr
       th = Article.human_attribute_name(:id)
       th = Article.human_attribute_name(:keyword)
-      - dates.each do |date|
+      - (@prev_month..@today).each do |date|
         th = date
 
   tbody
@@ -20,7 +20,7 @@ table
         tr
           td = article.id
           td = article.keyword
-          - dates.each do |date|
+          - (@prev_month..@today).each do |date|
             - if article.has_ranking?(date)
               td = article.fetch_ranking(date)
             - else

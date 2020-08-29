@@ -8,10 +8,10 @@ class Article < ApplicationRecord
   has_many :rankings, dependent: :destroy
 
   def has_ranking?(date)
-    Article.find(self.id).rankings.find_by(ranked_on: date)
+    self.rankings.find_by(ranked_on: date)
   end
 
   def fetch_ranking(date)
-    Article.find(self.id).rankings.find_by(ranked_on: date).ranking
+    self.rankings.find_by(ranked_on: date).ranking
   end
 end
