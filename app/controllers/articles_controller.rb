@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @rankings = Article.chart(@article)
   end
 
   def new
