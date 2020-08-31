@@ -19,7 +19,7 @@ table
       - @articles.each do |article|
         tr
           td = article.id
-          td = article.keyword
+          td = link_to article.keyword, article_path(article)
           - (@prev_month..@today).each do |date|
             - if article.has_ranking?(date)
               td = article.fetch_ranking(date)
