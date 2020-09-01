@@ -27,6 +27,12 @@ RSpec.describe Article, type: :model do
     end
   end
 
+  describe "#.chart" do
+    it "記事の検索順位と記録日がハッシュで返る" do
+      expect(Article.chart(article_a)).to eq({"2020-08-20" => 1})
+    end
+  end
+
   it "#has_ranking" do
     expect(article_a.has_ranking?(20200820)).to be_truthy
   end

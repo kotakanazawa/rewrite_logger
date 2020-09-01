@@ -10,7 +10,7 @@ class Article < ApplicationRecord
   def self.chart(article)
     hash = Hash.new(0)
     article.rankings.each do |ranking|
-      hash[ranking.ranked_on] = ranking.ranking
+      hash[ranking.ranked_on.to_s] = ranking.ranking
     end
     hash
   end
@@ -23,4 +23,3 @@ class Article < ApplicationRecord
     self.rankings.find_by(ranked_on: date).ranking
   end
 end
-
