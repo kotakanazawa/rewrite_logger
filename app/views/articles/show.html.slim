@@ -10,7 +10,7 @@ p= @article.keyword
 
 h2 検索順位
 
-= line_chart @rankings, min: 1, max: 30, curve: false, suffix: "位", library: {scales: {yAxes: [{ticks: {reverse: true}}]}}
+= ranking_chart(@rankings)
 
 => link_to t("link.edit"), edit_article_path(@article)
 '|
