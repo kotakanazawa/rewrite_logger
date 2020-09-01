@@ -6,6 +6,7 @@ RSpec.describe Article, type: :model do
   let(:user_a) { FactoryBot.create(:user) }
   let!(:article_a) { FactoryBot.create(:article, url: "test_url", keyword: "テストキーワード", user: user_a) }
   let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
+  let!(:ranking_b) { FactoryBot.create(:ranking, ranking: 2, ranked_on: 20200819, article: article_a) }
 
   describe "記事の登録" do
     context "urlとkeywordを入力するとき" do
@@ -29,7 +30,11 @@ RSpec.describe Article, type: :model do
 
   describe "#.chart" do
     it "記事の検索順位と記録日がハッシュで返る" do
-      expect(Article.chart(article_a)).to eq({ "2020-08-20" => 1 })
+      expect(Article.chart(article_a)).to eq(
+        {
+          "2020-08-20" => 1,
+          "2020-08-19" => 2
+        })
     end
   end
 
