@@ -3,3 +3,5 @@ p Find me in app/views/logs/show.html.slim
 
 p= @log.title
 p= @log.description
+
+= link_to t("link.back"), article_path(@log.article_id)
