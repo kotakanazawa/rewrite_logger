@@ -48,6 +48,7 @@ ja:
     back: 戻る
     destroy: 削除
     new_article: 記事を登録する
+    new_log: ログを作成する
   success:
     article_was_successfully_created: 記事を登録しました
     article_was_successfully_updated: 記事を編集しました

@@ -30,3 +30,4 @@ h2 検索順位
         tr
           td = l log.created_at
           td = link_to log.title, log_path(log)
+= link_to t("link.new_log"), new_article_log_path(@article)
