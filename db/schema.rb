@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_09_02_003815) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_02_003815) do
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "logs", force: :cascade do |t|
+  create_table "logs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
     t.bigint "article_id", null: false
