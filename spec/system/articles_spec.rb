@@ -6,6 +6,7 @@ RSpec.describe "記事管理", type: :system do
   let(:user_a) { FactoryBot.create(:user, name: "ユーザーA", email: "a@example.com") }
   let(:user_b) { FactoryBot.create(:user, name: "ユーザーB", email: "b@example.com") }
   let!(:article_a) { FactoryBot.create(:article, url: "test_url", keyword: "テストキーワード", user: user_a) }
+  let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
 
   before do
     visit user_session_path
@@ -74,9 +75,17 @@ RSpec.describe "記事管理", type: :system do
         it "エラーとなる" do
           within "#error_explanation" do
             expect(page).to have_content "URLを入力してください"
-            expect(page).to have_content "を入力してください"
+            expect(page).to have_content "キーワードを入力してください"
           end
         end
+      end
+    end
+
+    describe "記事詳細" do
+      let(:login_user) { user_a }
+
+      it "検索順位が表示される" do
+        expect(page).to have_content "検索順位"
       end
     end
 end
