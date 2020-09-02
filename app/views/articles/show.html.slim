@@ -16,10 +16,17 @@ h2 検索順位
 '|
 =< link_to t("link.back"), articles_path
 
+
 -if @article.logs.present?
   h2 ログ
+  table
+    thead
+      tr
+        th = Log.human_attribute_name(:created_at)
+        th = Log.human_attribute_name(:title)
 
-  - @article.logs.each do |log|
-    li
-      = l log.created_at
-      = link_to log.title, log_path(log)
+    tbody
+      - @article.logs.each do |log|
+        tr
+          td = l log.created_at
+          td = link_to log.title, log_path(log)

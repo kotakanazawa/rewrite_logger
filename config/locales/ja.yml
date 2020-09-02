@@ -21,6 +21,7 @@ ja:
       user: ユーザー
       article: 記事
       ranking: 検索順位
+      log: ログ
     attributes:
       user:
         username: ユーザーネーム
@@ -32,6 +33,10 @@ ja:
       ranking:
         ranking: 順位
         ranked_on: 日付
+      log:
+        title: タイトル
+        description: 変更内容
+        created_at: ログ日
   helpers:
     submit:
       create: 登録する
