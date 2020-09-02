@@ -11,7 +11,7 @@ ja:
       sm: "%m/%d"
   time:
     formats:
-      default: "%Y年%m月%d日(%a) %H:%M"
+      default: "%Y年%m月%d日(%a)"
       short: "%Y/%m/%d %H:%M"
       time_only: "%H:%M"
       date_only: "%m月%d日"
