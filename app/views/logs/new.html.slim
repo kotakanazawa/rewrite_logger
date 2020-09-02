@@ -1,2 +1,10 @@
-h1 Logs#new
-p Find me in app/views/logs/new.html.slim
+h1 ログを作成する
+
+= form_with model: [@article, @log], local: true do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions = f.submit
