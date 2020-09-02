@@ -16,9 +16,10 @@ h2 検索順位
 '|
 =< link_to t("link.back"), articles_path
 
-h2 ログ
+-if @article.logs.present?
+  h2 ログ
 
-- @article.logs.each do |log|
-  li
-    = log.created_at
-    = log.title
+  - @article.logs.each do |log|
+    li
+      = log.created_at
+      = log.title
