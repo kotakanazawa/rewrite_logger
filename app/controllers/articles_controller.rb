@@ -4,12 +4,13 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = current_user.articles.includes(:log).order(ranked_on: :desc)
+    @articles = current_user.articles
     @today = Time.current.to_date
     @prev_month = Time.current.prev_month.to_date
   end
 
   def show
+    @logs = @article.logs.order(created_at: :desc)
     @rankings = Article.chart(@article)
   end
 

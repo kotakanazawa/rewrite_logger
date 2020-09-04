@@ -26,8 +26,10 @@ h2 検索順位
         th = Log.human_attribute_name(:title)
 
     tbody
-      - @article.logs.each do |log|
+      - @logs.each do |log|
         tr
           td = l log.created_at
           td = link_to log.title, log_path(log)
+
 = link_to t("link.new_log"), new_article_log_path(@article)
+= link_to t("link.back"), articles_path
