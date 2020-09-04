@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = current_user.articles
+    @articles = current_user.articles.includes(:log).order(ranked_on: :desc)
     @today = Time.current.to_date
     @prev_month = Time.current.prev_month.to_date
   end
