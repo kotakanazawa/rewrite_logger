@@ -1,5 +1,5 @@
 class LogsController < ApplicationController
-  before_action :set_article, only: [:new, :edit, :update, :create]
+  before_action :set_article, only: [:new, :update, :create]
 
   def new
     @log = Log.new
@@ -20,12 +20,23 @@ class LogsController < ApplicationController
   end
 
   def edit
+    @log = Log.find(params[:id])
   end
 
   def update
+    @log = Log.find(params[:id])
+
+    if @log.update(log_params)
+      redirect_to @log, notice: 'Log was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @log = Log.find(params[:id])
+    @log.destroy
+    redirect_to article_path(@log.article_id), notice: 'Log was successfully destroyed.'
   end
 
   private

@@ -1,9 +1,11 @@
-h1 Logs#show
-p Find me in app/views/logs/show.html.slim
+h1 ログの詳細
 
-p= @log.title
-p= @log.description
+h2 タイトル
+p = @log.title
+
+h2 ログ内容
+p = @log.description
 
 = link_to t("link.edit"), edit_log_path(@log)
-'|
+= link_to t("link.destroy"), @log, method: :delete, data: { confirm: "Are you sure?" }
 = link_to t("link.back"), article_path(@log.article_id)

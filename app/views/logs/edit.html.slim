@@ -1,7 +1,6 @@
-h1 Logs#edit
-p Find me in app/views/logs/edit.html.slim
+h1 ログを編集する
 
-= form_with model: [@article, @log], local: true do |f|
+= form_with(model: [@log.article, @log], local: true) do |f|
   .field
     = f.label :title
     = f.text_field :title
@@ -9,3 +8,5 @@ p Find me in app/views/logs/edit.html.slim
     = f.label :description
     = f.text_area :description
   .actions = f.submit
+
+= link_to t("link.back"), article_path(@log.article_id)
