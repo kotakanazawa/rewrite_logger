@@ -1,8 +1,16 @@
+- if log.errors.present?
+  ul#error_explanation
+    - log.errors.full_messages.each do |message|
+      li = message
+
 = form_with(model: [article, log], local: true) do |f|
   .field
     = f.label :title
     = f.text_field :title
+
   .field
     = f.label :description
     = f.text_area :description
   .actions = f.submit
+
+= link_to t("link.back"), article_path(article)
