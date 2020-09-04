@@ -1,10 +1,3 @@
 h1 ログを作成する
 
-= form_with model: [@article, @log], url: logs_path,local: true do |f|
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions = f.submit
+= render partial: "form", locals: { article: @article, log: @log}
