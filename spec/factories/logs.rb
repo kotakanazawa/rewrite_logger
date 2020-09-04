@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :log do
-    title { "MyString" }
-    description { "MyText" }
-    article { nil }
+    title { "テストログ" }
+    description { "テストログ詳細" }
+    article
   end
 end
