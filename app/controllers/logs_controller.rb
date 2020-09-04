@@ -1,5 +1,5 @@
 class LogsController < ApplicationController
-  before_action :set_article, only: [:new, :create]
+  before_action :set_article, only: [:new, :edit, :update, :create]
 
   def new
     @log = Log.new

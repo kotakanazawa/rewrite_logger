@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :articles do
-    resources :logs, except: :index, shallow: true
+    resources :logs, only: %i(new create update)
   end
+  resources :logs, only: %i(show destroy edit)
 end

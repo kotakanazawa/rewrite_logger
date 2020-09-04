@@ -4,4 +4,6 @@ p Find me in app/views/logs/show.html.slim
 p= @log.title
 p= @log.description
 
+= link_to t("link.edit"), edit_log_path(@log)
+'|
 = link_to t("link.back"), article_path(@log.article_id)

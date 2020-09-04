@@ -1,6 +1,6 @@
 h1 ログを作成する
 
-= form_with model: [@article, @log], local: true do |f|
+= form_with model: [@article, @log], url: logs_path,local: true do |f|
   .field
     = f.label :title
     = f.text_field :title
