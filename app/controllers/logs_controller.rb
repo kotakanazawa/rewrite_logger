@@ -1,12 +1,12 @@
 class LogsController < ApplicationController
-  before_action :set_article, only: [:new, :update, :create]
+  before_action :set_log, only: %i(show edit update destroy)
+  before_action :set_article, only: %i(new create update)
 
   def new
     @log = Log.new
   end
 
   def show
-    @log = Log.find(params[:id])
   end
 
   def create
@@ -20,12 +20,9 @@ class LogsController < ApplicationController
   end
 
   def edit
-    @log = Log.find(params[:id])
   end
 
   def update
-    @log = Log.find(params[:id])
-
     if @log.update(log_params)
       redirect_to @log, notice: 'Log was successfully updated.'
     else
@@ -34,7 +31,6 @@ class LogsController < ApplicationController
   end
 
   def destroy
-    @log = Log.find(params[:id])
     @log.destroy
     redirect_to article_path(@log.article_id), notice: 'Log was successfully destroyed.'
   end
@@ -43,6 +39,10 @@ class LogsController < ApplicationController
 
     def log_params
       params.require(:log).permit(:title, :description)
+    end
+
+    def set_log
+      @log = Log.find(params[:id])
     end
 
     def set_article
