@@ -13,7 +13,7 @@ class LogsController < ApplicationController
     @log = @article.logs.new(log_params)
 
     if @log.save
-      redirect_to @log
+      redirect_to @log, notice: t("success.log_was_successfully_created")
     else
       render :new
     end
@@ -24,7 +24,7 @@ class LogsController < ApplicationController
 
   def update
     if @log.update(log_params)
-      redirect_to @log, notice: 'Log was successfully updated.'
+      redirect_to @log, notice: t("success.log_was_successfully_updated")
     else
       render :edit
     end
@@ -32,7 +32,7 @@ class LogsController < ApplicationController
 
   def destroy
     @log.destroy
-    redirect_to article_path(@log.article_id), notice: 'Log was successfully destroyed.'
+    redirect_to article_path(@log.article_id), notice: t("success.log_was_successfully_destroyed")
   end
 
   private

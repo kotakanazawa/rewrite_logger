@@ -53,5 +53,8 @@ ja:
     article_was_successfully_created: 記事を登録しました
     article_was_successfully_updated: 記事を編集しました
     article_was_successfully_destroyed: 記事を削除しました
+    log_was_successfully_created: ログを登録しました
+    log_was_successfully_updated: ログを編集しました
+    log_was_successfully_destroyed: ログを削除しました
   confirm:
     are_you_sure: 本当によろしいですか？

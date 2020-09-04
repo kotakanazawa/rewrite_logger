@@ -7,5 +7,5 @@ h2 ログ内容
 p = @log.description
 
 = link_to t("link.edit"), edit_log_path(@log)
-= link_to t("link.destroy"), @log, method: :delete, data: { confirm: "Are you sure?" }
+= link_to t("link.destroy"), @log, method: :delete, data: { confirm: t("confirm.are_you_sure") }
 = link_to t("link.back"), article_path(@log.article_id)
