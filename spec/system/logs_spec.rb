@@ -80,37 +80,37 @@ RSpec.describe "ログ管理", type: :system do
       end
     end
 
-    describe "ログ編集" do
-      let(:login_user) { user_a }
+  describe "ログ編集" do
+    let(:login_user) { user_a }
 
-      before do
-        visit article_path(article_a)
-        click_link "テストログ1"
-        click_link "編集"
-        fill_in "タイトル", with: "ログタイトル編集済み"
-        fill_in "変更内容", with: "ログ変更内容編集済み"
-        click_button "更新する"
-      end
-
-      it "ログを編集できる" do
-        expect(page).to have_content "ログタイトル編集済み"
-        expect(page).to have_content "ログ変更内容編集済み"
-      end
+    before do
+      visit article_path(article_a)
+      click_link "テストログ1"
+      click_link "編集"
+      fill_in "タイトル", with: "ログタイトル編集済み"
+      fill_in "変更内容", with: "ログ変更内容編集済み"
+      click_button "更新する"
     end
 
-    describe "ログ削除" do
-      let(:login_user) { user_a }
-
-      before do
-        visit article_path(article_a)
-        click_link "テストログ1"
-      end
-
-      it "正常に削除できる" do
-        page.accept_confirm do
-          click_link "削除"
-        end
-        expect(page).to have_content "ログを削除しました"
-      end
+    it "ログを編集できる" do
+      expect(page).to have_content "ログタイトル編集済み"
+      expect(page).to have_content "ログ変更内容編集済み"
     end
+  end
+
+  describe "ログ削除" do
+    let(:login_user) { user_a }
+
+    before do
+      visit article_path(article_a)
+      click_link "テストログ1"
+    end
+
+    it "正常に削除できる" do
+      page.accept_confirm do
+        click_link "削除"
+      end
+      expect(page).to have_content "ログを削除しました"
+    end
+  end
 end

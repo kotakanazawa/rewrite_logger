@@ -81,11 +81,11 @@ RSpec.describe "記事管理", type: :system do
       end
     end
 
-    describe "記事詳細" do
-      let(:login_user) { user_a }
+  describe "記事詳細" do
+    let(:login_user) { user_a }
 
-      it "検索順位が表示される" do
-        expect(page).to have_content "検索順位"
-      end
+    it "検索順位が表示される" do
+      expect(page).to have_content "検索順位"
     end
+  end
 end

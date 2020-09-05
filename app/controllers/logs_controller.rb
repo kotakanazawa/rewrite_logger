@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LogsController < ApplicationController
   before_action :set_log, only: %i(show edit update destroy)
   before_action :set_article, only: %i(new create update)
@@ -36,7 +38,6 @@ class LogsController < ApplicationController
   end
 
   private
-
     def log_params
       params.require(:log).permit(:title, :description)
     end
