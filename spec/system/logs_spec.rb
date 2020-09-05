@@ -4,7 +4,6 @@ require "rails_helper"
 
 RSpec.describe "ログ管理", type: :system do
   let(:user_a) { FactoryBot.create(:user, name: "ユーザーA", email: "a@example.com") }
-  let(:user_b) { FactoryBot.create(:user, name: "ユーザーB", email: "b@example.com") }
   let!(:article_a) { FactoryBot.create(:article, user: user_a) }
   let!(:log_a) { FactoryBot.create(:log, title: "テストログ1", description: "テストログ詳細1", article: article_a) }
   let!(:log_b) { FactoryBot.create(:log, title: "テストログ2", description: "テストログ詳細2", article: article_a) }
@@ -24,7 +23,7 @@ RSpec.describe "ログ管理", type: :system do
         visit article_path(article_a)
       end
 
-      it "ユーザーAが作成したログが表示される" do
+      it "ユーザーAが作成したログタイトルが表示される" do
         expect(page).to have_content "テストログ1"
         expect(page).to have_content "テストログ2"
       end
@@ -86,7 +85,7 @@ RSpec.describe "ログ管理", type: :system do
 
       before do
         visit article_path(article_a)
-        visit log_path(log_a)
+        click_link "テストログ1"
         click_link "編集"
         fill_in "タイトル", with: "ログタイトル編集済み"
         fill_in "変更内容", with: "ログ変更内容編集済み"
@@ -104,7 +103,7 @@ RSpec.describe "ログ管理", type: :system do
 
       before do
         visit article_path(article_a)
-        visit log_path(log_a)
+        click_link "テストログ1"
       end
 
       it "正常に削除できる" do
