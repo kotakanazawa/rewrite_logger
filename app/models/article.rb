@@ -6,6 +6,7 @@ class Article < ApplicationRecord
 
   belongs_to :user
   has_many :rankings, dependent: :destroy
+  has_many :logs, dependent: :destroy
 
   def self.chart(article)
     hash = Hash.new(0)

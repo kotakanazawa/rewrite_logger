@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @logs = @article.logs.order(created_at: :desc)
     @rankings = Article.chart(@article)
   end
 

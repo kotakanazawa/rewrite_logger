@@ -12,8 +12,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_062847) do
+ActiveRecord::Schema.define(version: 2020_09_04_060529) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
@@ -23,6 +24,16 @@ ActiveRecord::Schema.define(version: 2020_08_22_062847) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "logs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.bigint "article_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_logs_on_article_id"
+    t.index ["created_at"], name: "index_logs_on_created_at"
   end
 
   create_table "rankings", force: :cascade do |t|
@@ -48,5 +59,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_062847) do
   end
 
   add_foreign_key "articles", "users"
+  add_foreign_key "logs", "articles"
   add_foreign_key "rankings", "articles"
 end
