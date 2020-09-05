@@ -37,7 +37,7 @@ RSpec.describe "ログ管理", type: :system do
 
       before do
         visit article_path(article_a)
-        visit log_path(log_a)
+        click_link "テストログ1"
       end
 
       it "ログの詳細が表示される" do
@@ -52,7 +52,7 @@ RSpec.describe "ログ管理", type: :system do
 
       before do
         visit article_path(article_a)
-        visit new_article_log_path(article_a)
+        click_link "ログを作成する"
         fill_in "タイトル", with: log_title
         fill_in "変更内容", with: log_description
         click_button "登録する"
@@ -87,7 +87,7 @@ RSpec.describe "ログ管理", type: :system do
       before do
         visit article_path(article_a)
         visit log_path(log_a)
-        visit edit_log_path(log_a)
+        click_link "編集"
         fill_in "タイトル", with: "ログタイトル編集済み"
         fill_in "変更内容", with: "ログ変更内容編集済み"
         click_button "更新する"
