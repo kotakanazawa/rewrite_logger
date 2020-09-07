@@ -1,0 +1,644 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - ハンターハンター",
+        "totalResults": "75800000",
+        "searchTerms": "ハンターハンター",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "3d74cec29c9aa6d31"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - ハンターハンター",
+        "totalResults": "75800000",
+        "searchTerms": "ハンターハンター",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "3d74cec29c9aa6d31"
+      }
+    ]
+  },
+  "context": {
+    "title": "Google"
+  },
+  "searchInformation": {
+    "searchTime": 0.709239,
+    "formattedSearchTime": "0.71",
+    "totalResults": "75800000",
+    "formattedTotalResults": "75,800,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "『HUNTER×HUNTER』（ハンター×ハンター）",
+      "htmlTitle": "『\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e』（\u003cb\u003eハンター\u003c/b\u003e×\u003cb\u003eハンター\u003c/b\u003e）",
+      "link": "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER",
+      "displayLink": "ja.wikipedia.org",
+      "snippet": "『HUNTER×HUNTER』（ハンター×ハンター）は、冨樫義博による日本の少年\n漫画作品。『H×H』と略されることもある。 目次. 1 概要. 1.1 休載. 2 ストーリー. \n2.1 ハンター試験編; 2.2 ゾルディック家編; 2.3 天空闘技場編; 2.4 くじら島への ...",
+      "htmlSnippet": "『\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e』（\u003cb\u003eハンター\u003c/b\u003e×\u003cb\u003eハンター\u003c/b\u003e）は、冨樫義博による日本の少年\u003cbr\u003e\n漫画作品。『H×H』と略されることもある。 目次. 1 概要. 1.1 休載. 2 ストーリー. \u003cbr\u003e\n2.1 \u003cb\u003eハンター\u003c/b\u003e試験編; 2.2 ゾルディック家編; 2.3 天空闘技場編; 2.4 くじら島への&nbsp;...",
+      "cacheId": "k3q1wkYq5jMJ",
+      "formattedUrl": "https://ja.wikipedia.org/wiki/HUNTER×HUNTER",
+      "htmlFormattedUrl": "https://ja.wikipedia.org/wiki/\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e",
+      "pagemap": {
+        "metatags": [
+          {
+            "referrer": "origin"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "『HUNTER×HUNTER』｜集英社『週刊少年ジャンプ』公式サイト",
+      "htmlTitle": "『\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e』｜集英社『週刊少年ジャンプ』公式サイト",
+      "link": "https://www.shonenjump.com/j/rensai/hunter.html",
+      "displayLink": "www.shonenjump.com",
+      "snippet": "『HUNTER×HUNTER』｜父と同じハンターを目指し、そして会うため、\nハンター試験に参加するゴン。そこで出会ったレオリオ・クラピカ・キルア\nと共に、難関を突破していくが!?",
+      "htmlSnippet": "『\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e』｜父と同じ\u003cb\u003eハンター\u003c/b\u003eを目指し、そして会うため、\u003cbr\u003e\n\u003cb\u003eハンター\u003c/b\u003e試験に参加するゴン。そこで出会ったレオリオ・クラピカ・キルア\u003cbr\u003e\nと共に、難関を突破していくが!?",
+      "cacheId": "6WUZymLggDIJ",
+      "formattedUrl": "https://www.shonenjump.com/j/rensai/hunter.html",
+      "htmlFormattedUrl": "https://www.shonenjump.com/j/rensai/\u003cb\u003ehunter\u003c/b\u003e.html",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT6Hyq-jQQsrzs5PK7qN5nQPHQj3Wu696vsjKN-bnxhUpJADmx8Yr4KH3U",
+            "width": "249",
+            "height": "202"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://www.shonenjump.com/j/rensai/img/main_hunter.jpg",
+            "og:type": "article",
+            "twitter:card": "summary",
+            "og:site_name": "集英社『週刊少年ジャンプ』公式サイト",
+            "twitter:site": "@shonenjump_news",
+            "viewport": "width=device-width, initial-scale=1.0",
+            "og:title": "『HUNTER×HUNTER』｜集英社『週刊少年ジャンプ』公式サイト",
+            "og:locale": "ja_JP",
+            "og:url": "https://www.shonenjump.com/j/rensai/hunter.html",
+            "og:description": "『HUNTER×HUNTER』｜父と同じハンターを目指し、そして会うため、ハンター試験に参加するゴン。そこで出会ったレオリオ・クラピカ・キルアと共に、難関を突破していくが!?"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.shonenjump.com/j/rensai/img/main_hunter.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "【2020最新】「ハンターハンター」キャラ強さランキングTOP20 ...",
+      "htmlTitle": "【2020最新】「\u003cb\u003eハンターハンター\u003c/b\u003e」キャラ強さランキングTOP20 ...",
+      "link": "https://ciatr.jp/topics/311588",
+      "displayLink": "ciatr.jp",
+      "snippet": "2019年7月4日 ... 週刊少年ジャンプ連載のバトル漫画『HUNTER×HUNTER(ハンターハンター)』\nに登場するキャラクターの中で最強は誰なのか！？2020年の最新TOP20を\nランキング形式で紹介します。",
+      "htmlSnippet": "2019年7月4日 \u003cb\u003e...\u003c/b\u003e 週刊少年ジャンプ連載のバトル漫画『HUNTER×HUNTER(\u003cb\u003eハンターハンター\u003c/b\u003e)』\u003cbr\u003e\nに登場するキャラクターの中で最強は誰なのか！？2020年の最新TOP20を\u003cbr\u003e\nランキング形式で紹介します。",
+      "cacheId": "xAH5LzpsVMIJ",
+      "formattedUrl": "https://ciatr.jp/topics/311588",
+      "htmlFormattedUrl": "https://ciatr.jp/topics/311588",
+      "pagemap": {
+        "thumbnail": [
+          {
+            "src": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg"
+          }
+        ],
+        "imageobject": [
+          {
+            "width": "960",
+            "url": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg",
+            "height": "540"
+          }
+        ],
+        "person": [
+          {
+            "name": "間真生"
+          }
+        ],
+        "organization": [
+          {
+            "name": "ciatr",
+            "logo": "https://ciatr.jp/images/header_logo.png"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg",
+            "thumbnail": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg",
+            "og:type": "website",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "【2020最新】「ハンターハンター」キャラ強さランキングTOP20 最強は誰だ！？ | ciatr[シアター]",
+            "apple-mobile-web-app-title": "ciatr",
+            "og:title": "【2020最新】「ハンターハンター」キャラ強さランキングTOP20 最強は誰だ！？ | ciatr[シアター]",
+            "og:description": "週刊少年ジャンプ連載のバトル漫画『HUNTER×HUNTER(ハンターハンター)』に登場するキャラクターの中で最強は誰なのか！？2020年の最新TOP20をランキング形式で紹介します。",
+            "twitter:image": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg",
+            "fb:app_id": "265933153444271",
+            "twitter:site": "@ciatrjp",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+            "twitter:description": "週刊少年ジャンプ連載のバトル漫画『HUNTER×HUNTER(ハンターハンター)』に登場するキャラクターの中で最強は誰なのか！？2020年の最新TOP20をランキング形式で紹介します。",
+            "og:url": "https://ciatr.jp/topics/311588"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://images.ciatr.jp/2020/02/w_828/BEaO03aQuCwHL5qeXLiITLWC90HoiKIkQn0NAKXk.jpeg",
+            "width": "299",
+            "type": "1",
+            "height": "168"
+          }
+        ],
+        "article": [
+          {
+            "articlebody": "『HUNTER×HUNTER(ハンターハンター)』のキャラ強さランキング！2020年最新版 12月24日発売の「HUNTER×HUNTER」選挙編BD&DVD-BOXを、ジャンプフェスタ2015にて...",
+            "datemodified": "2019-07-04T12:33:32+0900",
+            "headline": "【2020最新】「ハンターハンター」キャラ強さランキングTOP20 最強は誰だ！？",
+            "datepublished": "2019-02-12T15:20:06+0900"
+          }
+        ],
+        "listitem": [
+          {
+            "item": "ciatr シアター",
+            "name": "ciatr シアター",
+            "position": "1"
+          },
+          {
+            "item": "アニメ",
+            "name": "アニメ",
+            "position": "2"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "【10分でわかる】ハンターハンターの暗黒大陸編を徹底解説 ...",
+      "htmlTitle": "【10分でわかる】\u003cb\u003eハンターハンター\u003c/b\u003eの暗黒大陸編を徹底解説 ...",
+      "link": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+      "displayLink": "www.youtube.com",
+      "snippet": "2020年7月25日 ... 漫画スタジオのしょーへいです！ 今回はハンターハンターの暗黒大陸について\n解説しました！ 内容が難しいという方々に ストーリーの面白さが伝わるように\n作成してみました！ 冒険のためにキャラクター達が必死に準備して ...",
+      "htmlSnippet": "2020年7月25日 \u003cb\u003e...\u003c/b\u003e 漫画スタジオのしょーへいです！ 今回は\u003cb\u003eハンターハンター\u003c/b\u003eの暗黒大陸について\u003cbr\u003e\n解説しました！ 内容が難しいという方々に ストーリーの面白さが伝わるように\u003cbr\u003e\n作成してみました！ 冒険のためにキャラクター達が必死に準備して&nbsp;...",
+      "formattedUrl": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+      "htmlFormattedUrl": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFoJ-WFJ_6KbPo7bjkQknahdhVNGhpede6Ib-Aoo-KAsE6UV-rSpJ6F4",
+            "width": "300",
+            "height": "168"
+          }
+        ],
+        "imageobject": [
+          {
+            "width": "1280",
+            "url": "https://i.ytimg.com/vi/aaD1wwjWBYc/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "person": [
+          {
+            "name": "漫画スタジオ",
+            "url": "http://www.youtube.com/channel/UCPKn97bn6BJdwDu9pcuk0xQ"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://i.ytimg.com/vi/aaD1wwjWBYc/maxresdefault.jpg",
+            "twitter:app:url:iphone": "vnd.youtube://www.youtube.com/watch?v=aaD1wwjWBYc&feature=applinks",
+            "twitter:app:id:googleplay": "com.google.android.youtube",
+            "og:image:width": "1280",
+            "twitter:card": "player",
+            "theme-color": "#ff0000",
+            "og:site_name": "YouTube",
+            "twitter:url": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+            "twitter:app:url:ipad": "vnd.youtube://www.youtube.com/watch?v=aaD1wwjWBYc&feature=applinks",
+            "al:android:package": "com.google.android.youtube",
+            "twitter:app:name:googleplay": "YouTube",
+            "title": "【10分でわかる】ハンターハンターの暗黒大陸編を徹底解説",
+            "al:ios:url": "vnd.youtube://www.youtube.com/watch?v=aaD1wwjWBYc&feature=applinks",
+            "twitter:app:id:iphone": "544007664",
+            "og:description": "漫画スタジオのしょーへいです！ 今回はハンターハンターの暗黒大陸について解説しました！ 内容が難しいという方々に ストーリーの面白さが伝わるように作成してみました！ 冒険のためにキャラクター達が必死に準備している描写は とてもワクワクしますので是非実際に読んでみてください^^ ▼前回の動画 【10分で解説】ハンタ...",
+            "al:ios:app_store_id": "544007664",
+            "twitter:image": "https://i.ytimg.com/vi/aaD1wwjWBYc/maxresdefault.jpg",
+            "twitter:player": "https://www.youtube.com/embed/aaD1wwjWBYc",
+            "twitter:player:height": "720",
+            "twitter:site": "@youtube",
+            "og:video:type": "text/html",
+            "og:video:height": "720",
+            "og:video:url": "https://www.youtube.com/embed/aaD1wwjWBYc",
+            "og:type": "video.other",
+            "twitter:title": "【10分でわかる】ハンターハンターの暗黒大陸編を徹底解説",
+            "al:ios:app_name": "YouTube",
+            "og:title": "【10分でわかる】ハンターハンターの暗黒大陸編を徹底解説",
+            "og:image:height": "720",
+            "twitter:app:id:ipad": "544007664",
+            "al:web:url": "https://www.youtube.com/watch?v=aaD1wwjWBYc&feature=applinks",
+            "og:video:secure_url": "https://www.youtube.com/embed/aaD1wwjWBYc",
+            "og:video:tag": "ハンターハンター",
+            "og:video:width": "1280",
+            "al:android:url": "vnd.youtube://www.youtube.com/watch?v=aaD1wwjWBYc&feature=applinks",
+            "fb:app_id": "87741124305",
+            "twitter:app:url:googleplay": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+            "twitter:app:name:ipad": "YouTube",
+            "twitter:description": "漫画スタジオのしょーへいです！ 今回はハンターハンターの暗黒大陸について解説しました！ 内容が難しいという方々に ストーリーの面白さが伝わるように作成してみました！ 冒険のためにキャラクター達が必死に準備している描写は とてもワクワクしますので是非実際に読んでみてください^^ ▼前回の動画 【10分で解説】ハンタ...",
+            "og:url": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+            "twitter:player:width": "1280",
+            "al:android:app_name": "YouTube",
+            "twitter:app:name:iphone": "YouTube"
+          }
+        ],
+        "videoobject": [
+          {
+            "embedurl": "https://www.youtube.com/embed/aaD1wwjWBYc",
+            "playertype": "HTML5 Flash",
+            "isfamilyfriendly": "True",
+            "uploaddate": "2020-07-25",
+            "description": "漫画スタジオのしょーへいです！ 今回はハンターハンターの暗黒大陸について解説しました！ 内容が難しいという方々に ストーリーの面白さが...",
+            "videoid": "aaD1wwjWBYc",
+            "url": "https://www.youtube.com/watch?v=aaD1wwjWBYc",
+            "duration": "PT10M46S",
+            "unlisted": "False",
+            "name": "【10分でわかる】ハンターハンターの暗黒大陸編を徹底解説",
+            "paid": "False",
+            "width": "1280",
+            "regionsallowed": "AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH...",
+            "genre": "Education",
+            "interactioncount": "558235",
+            "channelid": "UCPKn97bn6BJdwDu9pcuk0xQ",
+            "datepublished": "2020-07-25",
+            "thumbnailurl": "https://i.ytimg.com/vi/aaD1wwjWBYc/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://i.ytimg.com/vi/aaD1wwjWBYc/maxresdefault.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "HUNTER×HUNTER｜日本テレビ",
+      "htmlTitle": "\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e｜日本テレビ",
+      "link": "https://www.ntv.co.jp/hunterhunter/sphone/",
+      "displayLink": "www.ntv.co.jp",
+      "snippet": "再放送決定のお知らせ 日本テレビにて、アニメ「HUNTER×HUNTER」が 4月\nより毎週火曜25時29分から「Anichu」枠にて再放送することが決定いたしました\n！！ (※放送時間は変更になる場合がございます) オンエアを楽しみにお待ち ...",
+      "htmlSnippet": "再放送決定のお知らせ 日本テレビにて、アニメ「\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e」が 4月\u003cbr\u003e\nより毎週火曜25時29分から「Anichu」枠にて再放送することが決定いたしました\u003cbr\u003e\n！！ (※放送時間は変更になる場合がございます) オンエアを楽しみにお待ち&nbsp;...",
+      "cacheId": "JkelHbKhp5IJ",
+      "formattedUrl": "https://www.ntv.co.jp/hunterhunter/sphone/",
+      "htmlFormattedUrl": "https://www.ntv.co.jp/\u003cb\u003ehunterhunter\u003c/b\u003e/sphone/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJuq39NIeVGk6Gb6BH7qtVpJRDwa33JR9A27U-Eqj5_WsGgnX19YLrZmg",
+            "width": "140",
+            "height": "80"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://www.ntv.co.jp/hunterhunter/images/hunterhunter.gif",
+            "copyright": "© Nippon Television Network Corporation",
+            "og:type": "tv_show",
+            "fb:app_id": "327091700663212",
+            "og:site_name": "日本テレビ",
+            "viewport": "width=device-width",
+            "og:title": "HUNTER×HUNTER",
+            "auther": "日本テレビ",
+            "og:locale": "ja_JP",
+            "og:url": "https://www.ntv.co.jp/hunterhunter/",
+            "og:description": "日テレ「HUNTER×HUNTER」（毎週火曜深夜25：29〜放送）公式サイトです。"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.ntv.co.jp/hunterhunter/images/hunterhunter.gif"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "【ハンターハンター考察】カイト徹底解説【HUNTERxHUNTER ...",
+      "htmlTitle": "【\u003cb\u003eハンターハンター\u003c/b\u003e考察】カイト徹底解説【HUNTERxHUNTER ...",
+      "link": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+      "displayLink": "www.youtube.com",
+      "snippet": "2020年5月5日 ... 毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターX\nハンターのキャラクター カイトの徹底解説 H×H Informationへようこそ。 当\nチャンネルはHUNTER×HUNTERの考察、解説などを週一配信目指して ...",
+      "htmlSnippet": "2020年5月5日 \u003cb\u003e...\u003c/b\u003e 毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） \u003cb\u003eハンター\u003c/b\u003eX\u003cbr\u003e\n\u003cb\u003eハンター\u003c/b\u003eのキャラクター カイトの徹底解説 H×H Informationへようこそ。 当\u003cbr\u003e\nチャンネルは\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003eの考察、解説などを週一配信目指して&nbsp;...",
+      "formattedUrl": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+      "htmlFormattedUrl": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQmmapkGkb0QpnjhVIImT2bgZnUP1ngo7pnjPOCUfZh_n1TTVihPi7kKehn",
+            "width": "300",
+            "height": "168"
+          }
+        ],
+        "imageobject": [
+          {
+            "width": "1280",
+            "url": "https://i.ytimg.com/vi/y8Qluma0mX4/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "person": [
+          {
+            "name": "HxH Information",
+            "url": "http://www.youtube.com/channel/UCaAG2AP7w8judHVSG9PW39g"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://i.ytimg.com/vi/y8Qluma0mX4/maxresdefault.jpg",
+            "og:image:width": "1280",
+            "twitter:card": "player",
+            "og:site_name": "YouTube",
+            "twitter:url": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+            "al:android:package": "com.google.android.youtube",
+            "title": "【ハンターハンター考察】カイト徹底解説【HUNTERxHUNTER考察】",
+            "al:ios:url": "vnd.youtube://www.youtube.com/watch?v=y8Qluma0mX4&feature=applinks",
+            "og:description": "毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターXハンターのキャラクター カイトの徹底解説 H×H Informationへようこそ。 当チャンネルはHUNTER×HUNTERの考察、解説などを週一配信目指して製作しております。 よければチャンネル登録や高評価など、よろしくお願いしますね＜...",
+            "al:ios:app_store_id": "544007664",
+            "twitter:image": "https://i.ytimg.com/vi/y8Qluma0mX4/maxresdefault.jpg",
+            "twitter:site": "@youtube",
+            "og:video:type": "text/html",
+            "og:video:height": "720",
+            "og:video:url": "https://www.youtube.com/embed/y8Qluma0mX4",
+            "og:type": "video.other",
+            "twitter:title": "【ハンターハンター考察】カイト徹底解説【HUNTERxHUNTER考察】",
+            "al:ios:app_name": "YouTube",
+            "og:title": "【ハンターハンター考察】カイト徹底解説【HUNTERxHUNTER考察】",
+            "og:image:height": "720",
+            "al:web:url": "https://www.youtube.com/watch?v=y8Qluma0mX4&feature=applinks",
+            "og:video:secure_url": "https://www.youtube.com/embed/y8Qluma0mX4",
+            "og:video:tag": "ハンター",
+            "og:video:width": "1280",
+            "al:android:url": "vnd.youtube://www.youtube.com/watch?v=y8Qluma0mX4&feature=applinks",
+            "fb:app_id": "87741124305",
+            "twitter:description": "毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターXハンターのキャラクター カイトの徹底解説 H×H Informationへようこそ。 当チャンネルはHUNTER×HUNTERの考察、解説などを週一配信目指して製作しております。 よければチャンネル登録や高評価など、よろしくお願いしますね＜...",
+            "og:url": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+            "al:android:app_name": "YouTube",
+            "twitter:app:name:iphone": "YouTube"
+          }
+        ],
+        "videoobject": [
+          {
+            "embedurl": "https://www.youtube.com/embed/y8Qluma0mX4",
+            "playertype": "HTML5 Flash",
+            "isfamilyfriendly": "True",
+            "uploaddate": "2020-05-05",
+            "description": "毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターXハンターのキャラクター カイトの徹底解説 H×H Informationへようこそ。...",
+            "videoid": "y8Qluma0mX4",
+            "url": "https://www.youtube.com/watch?v=y8Qluma0mX4",
+            "duration": "PT10M50S",
+            "unlisted": "False",
+            "name": "【ハンターハンター考察】カイト徹底解説【HUNTERxHUNTER考察】",
+            "paid": "False",
+            "width": "1280",
+            "regionsallowed": "AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH...",
+            "genre": "Film & Animation",
+            "interactioncount": "428173",
+            "channelid": "UCaAG2AP7w8judHVSG9PW39g",
+            "datepublished": "2020-05-05",
+            "thumbnailurl": "https://i.ytimg.com/vi/y8Qluma0mX4/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://i.ytimg.com/vi/y8Qluma0mX4/maxresdefault.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "HUNTER×HUNTER｜日本テレビ",
+      "htmlTitle": "\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e｜日本テレビ",
+      "link": "https://www.ntv.co.jp/hunterhunter/",
+      "displayLink": "www.ntv.co.jp",
+      "snippet": "日テレ「HUNTER×HUNTER」（毎週水曜午前1:59〜（火曜深夜）放送）公式\nサイトです。",
+      "htmlSnippet": "日テレ「\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e」（毎週水曜午前1:59〜（火曜深夜）放送）公式\u003cbr\u003e\nサイトです。",
+      "cacheId": "UvMZfJX-ivIJ",
+      "formattedUrl": "https://www.ntv.co.jp/hunterhunter/",
+      "htmlFormattedUrl": "https://www.ntv.co.jp/\u003cb\u003ehunterhunter\u003c/b\u003e/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJuq39NIeVGk6Gb6BH7qtVpJRDwa33JR9A27U-Eqj5_WsGgnX19YLrZmg",
+            "width": "140",
+            "height": "80"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://www.ntv.co.jp/hunterhunter/images/hunterhunter.gif",
+            "copyright": "© Nippon Television Network Corporation",
+            "og:type": "tv_show",
+            "fb:app_id": "327091700663212",
+            "og:site_name": "日本テレビ",
+            "og:title": "HUNTER×HUNTER",
+            "auther": "日本テレビ",
+            "og:locale": "ja_JP",
+            "og:url": "https://www.ntv.co.jp/hunterhunter/",
+            "og:description": "日テレ「HUNTER×HUNTER」（毎週水曜午前1:59〜（火曜深夜）放送）公式サイトです。"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.ntv.co.jp/hunterhunter/images/hunterhunter.gif"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "【ハンターハンター考察】ゼノ＝ゾルディック徹底解説 ...",
+      "htmlTitle": "【\u003cb\u003eハンターハンター\u003c/b\u003e考察】ゼノ＝ゾルディック徹底解説 ...",
+      "link": "https://www.youtube.com/watch?v=Eqq1o24OFWg",
+      "displayLink": "www.youtube.com",
+      "snippet": "2020年7月14日 ... 毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターx\nハンターのキャラクター ゼノ＝ゾルディックの徹底解説 H×H Informationへ\nようこそ。 当チャンネルはHUNTER×HUNTERの考察、解説などを週一 ...",
+      "htmlSnippet": "2020年7月14日 \u003cb\u003e...\u003c/b\u003e 毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） \u003cb\u003eハンター\u003c/b\u003ex\u003cbr\u003e\n\u003cb\u003eハンター\u003c/b\u003eのキャラクター ゼノ＝ゾルディックの徹底解説 H×H Informationへ\u003cbr\u003e\nようこそ。 当チャンネルは\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003eの考察、解説などを週一&nbsp;...",
+      "formattedUrl": "https://www.youtube.com/watch?v=Eqq1o24OFWg",
+      "htmlFormattedUrl": "https://www.youtube.com/watch?v=Eqq1o24OFWg",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD72NTiMyx2h20RD4IrBJbaImb6BKOVHesevVXZ-ChOmXlePAdaavaW9s",
+            "width": "300",
+            "height": "168"
+          }
+        ],
+        "imageobject": [
+          {
+            "width": "1280",
+            "url": "https://i.ytimg.com/vi/Eqq1o24OFWg/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "person": [
+          {
+            "name": "HxH Information",
+            "url": "http://www.youtube.com/channel/UCaAG2AP7w8judHVSG9PW39g"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://i.ytimg.com/vi/Eqq1o24OFWg/maxresdefault.jpg",
+            "og:image:width": "1280",
+            "og:type": "video.other",
+            "og:site_name": "YouTube",
+            "al:ios:app_name": "YouTube",
+            "og:title": "【ハンターハンター考察】ゼノ＝ゾルディック徹底解説【HUNTERxHUNTER考察】",
+            "og:image:height": "720",
+            "al:android:package": "com.google.android.youtube",
+            "title": "【ハンターハンター考察】ゼノ＝ゾルディック徹底解説【HUNTERxHUNTER考察】",
+            "al:ios:url": "vnd.youtube://www.youtube.com/watch?v=Eqq1o24OFWg&feature=applinks",
+            "al:web:url": "https://www.youtube.com/watch?v=Eqq1o24OFWg&feature=applinks",
+            "og:video:secure_url": "https://www.youtube.com/embed/Eqq1o24OFWg",
+            "og:video:tag": "ハンター",
+            "og:description": "毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターxハンターのキャラクター ゼノ＝ゾルディックの徹底解説 H×H Informationへようこそ。 当チャンネルはHUNTER×HUNTERの考察、解説などを週一配信目指して製作しております。 よければチャンネル登録や高評価など、よろしくお願...",
+            "og:video:width": "1280",
+            "al:ios:app_store_id": "544007664",
+            "al:android:url": "vnd.youtube://www.youtube.com/watch?v=Eqq1o24OFWg&feature=applinks",
+            "og:video:type": "text/html",
+            "og:video:height": "720",
+            "og:video:url": "https://www.youtube.com/embed/Eqq1o24OFWg",
+            "og:url": "https://www.youtube.com/watch?v=Eqq1o24OFWg",
+            "al:android:app_name": "YouTube"
+          }
+        ],
+        "videoobject": [
+          {
+            "embedurl": "https://www.youtube.com/embed/Eqq1o24OFWg",
+            "playertype": "HTML5 Flash",
+            "isfamilyfriendly": "True",
+            "uploaddate": "2020-07-14",
+            "description": "毎週火曜日18時！新作公開中！ 週刊少年ジャンプ連載（休載中） ハンターxハンターのキャラクター ゼノ＝ゾルディックの徹底解説 H×H Informationへ...",
+            "videoid": "Eqq1o24OFWg",
+            "url": "https://www.youtube.com/watch?v=Eqq1o24OFWg",
+            "duration": "PT11M40S",
+            "unlisted": "False",
+            "name": "【ハンターハンター考察】ゼノ＝ゾルディック徹底解説【HUNTERxHUNTER考察】",
+            "paid": "False",
+            "width": "1280",
+            "regionsallowed": "AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH...",
+            "genre": "Film & Animation",
+            "interactioncount": "192883",
+            "channelid": "UCaAG2AP7w8judHVSG9PW39g",
+            "datepublished": "2020-07-14",
+            "thumbnailurl": "https://i.ytimg.com/vi/Eqq1o24OFWg/maxresdefault.jpg",
+            "height": "720"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://i.ytimg.com/vi/Eqq1o24OFWg/maxresdefault.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "HUNTER X HUNTER 1 (ジャンプコミックス) | 冨樫 義博 |本 | 通販 ...",
+      "htmlTitle": "\u003cb\u003eHUNTER X HUNTER\u003c/b\u003e 1 (ジャンプコミックス) | 冨樫 義博 |本 | 通販 ...",
+      "link": "https://www.amazon.co.jp/HUNTER-X-1-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9/dp/4088725719",
+      "displayLink": "www.amazon.co.jp",
+      "snippet": "Amazonで冨樫 義博のHUNTER X HUNTER 1 (ジャンプコミックス)。アマゾン\nならポイント還元本が多数。冨樫 義博作品ほか、お急ぎ便対象商品は当日お届け\nも可能。またHUNTER X HUNTER 1 (ジャンプコミックス)もアマゾン配送商品 ...",
+      "htmlSnippet": "Amazonで冨樫 義博の\u003cb\u003eHUNTER X HUNTER\u003c/b\u003e 1 (ジャンプコミックス)。アマゾン\u003cbr\u003e\nならポイント還元本が多数。冨樫 義博作品ほか、お急ぎ便対象商品は当日お届け\u003cbr\u003e\nも可能。また\u003cb\u003eHUNTER X HUNTER\u003c/b\u003e 1 (ジャンプコミックス)もアマゾン配送商品&nbsp;...",
+      "cacheId": "WAoKcmNTjZsJ",
+      "formattedUrl": "https://www.amazon.co.jp/HUNTER-X-1-ジャンプコミックス/.../4088725719",
+      "htmlFormattedUrl": "https://www.amazon.co.jp/\u003cb\u003eHUNTER\u003c/b\u003e-X-1-ジャンプコミックス/.../4088725719",
+      "pagemap": {
+        "scraped": [
+          {
+            "image_link": "https://images-na.ssl-images-amazon.com/images/I/51+Cjka5vDL.jpg"
+          }
+        ],
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRS_osaPvXM-PTI_nttMlXYxQiYOnIyjwHXMu0SDu6Kg1a5krz7GkUzMyGq",
+            "width": "177",
+            "height": "284"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://images-fe.ssl-images-amazon.com/images/I/51%2BCjka5vDL._SR600%2c315_PIWhiteStrip%2cBottomLeft%2c0%2c35_PIStarRatingFOURANDHALF%2cBottomLeft%2c360%2c-6_SR600%2c315_ZA(101%20Reviews)%2c445%2c286%2c400%2c400%2carial%2c12%2c4%2c0%2c0%2c5_SCLZZZZZZZ_.jpg",
+            "og:title": "HUNTER X HUNTER 1 (ジャンプコミックス)",
+            "og:url": "https://www.amazon.co.jp/dp/4088725719/ref=tsm_1_fb_lk",
+            "title": "HUNTER X HUNTER 1 (ジャンプコミックス) | 冨樫 義博 |本 | 通販 | Amazon",
+            "og:description": "HUNTER X HUNTER 1 (ジャンプコミックス)"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://images-na.ssl-images-amazon.com/images/I/51+Cjka5vDL._SX310_BO1,204,203,200_.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "HUNTER×HUNTER が見放題！ | Hulu(フールー) 【お試し無料】",
+      "htmlTitle": "\u003cb\u003eHUNTER\u003c/b\u003e×\u003cb\u003eHUNTER\u003c/b\u003e が見放題！ | Hulu(フールー) 【お試し無料】",
+      "link": "https://www.hulu.jp/hunter-x-hunter",
+      "displayLink": "www.hulu.jp",
+      "snippet": "超難関で知られるハンター試験を見事突破し、「世界一のハンター」になれる\nのか!? ゴンの奇想天外、壮大苛烈な冒険の旅が、今始まる!!",
+      "htmlSnippet": "超難関で知られる\u003cb\u003eハンター\u003c/b\u003e試験を見事突破し、「世界一の\u003cb\u003eハンター\u003c/b\u003e」になれる\u003cbr\u003e\nのか!? ゴンの奇想天外、壮大苛烈な冒険の旅が、今始まる!!",
+      "cacheId": "9y0mq4TavZQJ",
+      "formattedUrl": "https://www.hulu.jp/hunter-x-hunter",
+      "htmlFormattedUrl": "https://www.hulu.jp/\u003cb\u003ehunter-x-hunter\u003c/b\u003e",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ2qiHvoP84VmMafc8TKMW6tYbXl3O-HnvqpgP4DZ59JiQFJOwOes9rQg",
+            "width": "299",
+            "height": "168"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-config": "/browserconfig.xml",
+            "og:image": "https://img.happyon.jp/d3urerHm/uploads/migration/50016449_series_art__338x600_hunter_x_hunter_37398da5be0e65b71700f49dbdb6d49a.jpg?size=600x338",
+            "og:type": "video.tv_show",
+            "og:image:width": "600",
+            "twitter:card": "summary_large_image",
+            "og:site_name": "Hulu",
+            "og:title": "HUNTER×HUNTER",
+            "og:image:height": "338",
+            "og:image:type": "image/png",
+            "og:description": "いざ、壮大な冒険へ! くじら島で暮らす少年･ゴンの夢は、幼い頃に別れた父と同じ「ハンター」になること。世界中に散らばる、財宝、秘宝、珍品、珍獣…「未知」への挑戦に命を賭けるプロハンターになる決意を胸に旅立つゴンは、同じハンター試験合格を目指す受験生のクラピカ、レオリオ、キルアと出会う。超難関で知られるハンター試験を見事突破し、「世界一のハンター」になれるのか!? ゴンの奇想天外、壮大苛烈な冒険の旅が、今始まる!!",
+            "fb:app_id": "1074217482619800",
+            "twitter:site": "@hulu_japan",
+            "viewport": "width=device-width, initial-scale=1, user-scalable=no",
+            "og:locale": "ja_JP",
+            "og:url": "https://www.hulu.jp/hunter-x-hunter",
+            "format-detection": "telephone=no,email=no"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://img.happyon.jp/d3urerHm/uploads/migration/50016449_series_art__338x600_hunter_x_hunter_37398da5be0e65b71700f49dbdb6d49a.jpg?size=600x338"
+          }
+        ]
+      }
+    }
+  ]
+}
