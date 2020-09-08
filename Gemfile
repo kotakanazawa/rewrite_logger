@@ -22,10 +22,12 @@ gem "devise"
 gem "devise-i18n"
 gem "chartkick"
 gem "groupdate"
+gem "google-api-client", "~> 0.34", require: "google/apis/customsearch_v1"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "factory_bot_rails"
+  gem "webmock"
 end
 
 group :development do

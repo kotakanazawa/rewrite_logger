@@ -24,35 +24,38 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new(article_params)
 
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: t("success.article_was_successfully_created") }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if @article.save
+      google = GoogleSearch.new(
+        query: @article.keyword,
+        url: @article.url,
+        api_key: "mock_api_key",
+        cse_id: "mock_cse_id"
+      )
+      @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
+      redirect_to @article, notice: t("success.article_was_successfully_created")
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @article.update(article_params)
-        format.html { redirect_to @article, notice: t("success.article_was_successfully_updated") }
-        format.json { render :show, status: :ok, location: @article }
-      else
-        format.html { render :edit }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if @article.update(article_params)
+      google = GoogleSearch.new(
+        query: @article.keyword,
+        url: @article.url,
+        api_key: "mock_api_key",
+        cse_id: "mock_cse_id"
+      )
+      @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
+      redirect_to @article, notice: t("success.article_was_successfully_updated")
+    else
+      render :edit
     end
   end
 
   def destroy
     @article.destroy
-    respond_to do |format|
-      format.html { redirect_to articles_url, notice: t("success.article_was_successfully_destroyed") }
-      format.json { head :no_content }
-    end
+    redirect_to articles_url, notice: t("success.article_was_successfully_destroyed")
   end
 
   private

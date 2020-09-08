@@ -4,4 +4,6 @@ h2 記事を編集する
 
 => link_to t("link.show"), @article
 '|
+= link_to t("link.destroy"), @article, method: :delete, data: { confirm: t("confirm.are_you_sure") }
+'|
 =< link_to t("link.back"), articles_path

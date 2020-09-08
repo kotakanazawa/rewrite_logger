@@ -13,6 +13,14 @@ RSpec.describe "記事管理", type: :system do
     fill_in "メールアドレス",	with: login_user.email
     fill_in "パスワード",	with: login_user.password
     click_button "ログイン"
+
+    stub_google!
+    @google_search = GoogleSearch.new(
+      query: "ハンターハンター",
+      url: "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER",
+      api_key: "mock_api_key",
+      cse_id: "mock_cse_id"
+    )
   end
 
   describe "記事一覧" do
@@ -59,12 +67,12 @@ RSpec.describe "記事管理", type: :system do
       end
 
       context "新規作成画面でURLとキーワードを入力したとき" do
-        let(:article_url) { "test_url_2" }
-        let(:article_keyword) { "テストキーワード2" }
+        let(:article_url) { "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER" }
+        let(:article_keyword) { "ハンターハンター" }
 
         it "正常に登録される" do
-          expect(page).to have_content "test_url_2"
-          expect(page).to have_content "テストキーワード2"
+          expect(page).to have_content "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER"
+          expect(page).to have_content "ハンターハンター"
         end
       end
 
