@@ -5,7 +5,6 @@ require "rails_helper"
 RSpec.describe GoogleSearch, type: :model do
   before do
     stub_google!
-
     @google_search = GoogleSearch.new(
       query: "ハンターハンター",
       url: "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER",

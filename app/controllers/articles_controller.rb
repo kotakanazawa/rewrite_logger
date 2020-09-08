@@ -28,8 +28,8 @@ class ArticlesController < ApplicationController
       google = GoogleSearch.new(
         query: @article.keyword,
         url: @article.url,
-        api_key: ENV["GOOGLE_API_KEY"],
-        cse_id: ENV["GOOGLE_CSE_ID"]
+        api_key: "mock_api_key",
+        cse_id: "mock_cse_id"
       )
       @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
       redirect_to @article, notice: t("success.article_was_successfully_created")
@@ -43,8 +43,8 @@ class ArticlesController < ApplicationController
       google = GoogleSearch.new(
         query: @article.keyword,
         url: @article.url,
-        api_key: ENV["GOOGLE_API_KEY"],
-        cse_id: ENV["GOOGLE_CSE_ID"]
+        api_key: "mock_api_key",
+        cse_id: "mock_cse_id"
       )
       @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
       redirect_to @article, notice: t("success.article_was_successfully_updated")
