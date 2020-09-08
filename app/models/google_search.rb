@@ -19,7 +19,6 @@ class GoogleSearch
   end
 
   private
-
     def ranked_in?
       google_rankings.any? { |result_url| @url.include?(result_url) }
     end

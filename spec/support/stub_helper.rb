@@ -1,5 +1,6 @@
-module StubHelper
+# frozen_string_literal: true
 
+module StubHelper
   def stub_google!
     stub_google_1_to_10!
     stub_google_11_to_20!
