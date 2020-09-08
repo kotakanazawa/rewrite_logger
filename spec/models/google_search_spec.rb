@@ -14,7 +14,7 @@ RSpec.describe Google, type: :model do
   end
 
   describe "#fetch_ranking" do
-    it "キーワードの順位が1位である" do
+    it "記事の順位を取得できる" do
       expect(@google_search.fetch_ranking).to eq 1
     end
   end
