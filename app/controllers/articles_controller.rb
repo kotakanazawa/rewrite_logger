@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+API_KEY = ENV['GOOGLE_API_KEY']
+CSE_ID = ENV['GOOGLE_CSE_ID']
+
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
@@ -25,6 +28,14 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new(article_params)
 
     if @article.save
+      google = GoogleSearch.new(
+        query: @article.keyword,
+        url: @article.url,
+        api_key: API_KEY,
+        cse_id: CSE_ID
+      )
+      pp @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
+
       redirect_to @article, notice: t("success.article_was_successfully_created")
     else
       render :new
