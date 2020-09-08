@@ -11,19 +11,32 @@ class GoogleSearch
   end
 
   def fetch_ranking
-    rankings_ary.index(@url) + 1
-  end
-
-  def rankings_ary
-    ary = []
-    ary = search_results.map { |item| item.link }
+    if ranked_in?
+      google_rankings.index(@url) + 1
+    else
+      51
+    end
   end
 
   private
 
-    def search_results
+    def ranked_in?
+      google_rankings.any? { |result_url| @url.include?(result_url) }
+    end
+
+    def google_rankings
       searcher = Customsearch::CustomsearchService.new
       searcher.key = @api_key
-      @search_results = searcher.list_cses(q: @query, cx: @cse_id, start: 1).items
+
+      google_rankings = []
+      start_index = 1
+
+      4.times do
+        search_results = searcher.list_cses(q: @query, cx: @cse_id, start: start_index).items
+        ranking_ary = search_results.map { |item| item.link }
+        google_rankings << ranking_ary
+        start_index += 10
+      end
+      google_rankings.flatten
     end
 end
