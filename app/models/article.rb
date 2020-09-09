@@ -16,18 +16,6 @@ class Article < ApplicationRecord
     hash
   end
 
-  def self.create_daily_rankings
-    articles.each do |article|
-      google = GoogleSearch.new(
-        query: article.keyword,
-        url: article.url,
-        api_key: ENV["GOOGLE_API_KEY"],
-        cse_id: ENV["GOOGLE_CSE_ID"]
-      )
-      article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
-    end
-  end
-
   def has_ranking?(date)
     self.rankings.find_by(ranked_on: date)
   end
