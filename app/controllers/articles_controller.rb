@@ -25,12 +25,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new(article_params)
 
     if @article.save
-      google = GoogleSearch.new(
-        query: @article.keyword,
-        url: @article.url,
-        api_key: "mock_api_key",
-        cse_id: "mock_cse_id"
-      )
+      google = GoogleSearch.new(query: @article.keyword, url: @article.url, api_key: "mock_api_key", cse_id: "mock_cse_id")
       @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
       redirect_to @article, notice: t("success.article_was_successfully_created")
     else
@@ -40,12 +35,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      google = GoogleSearch.new(
-        query: @article.keyword,
-        url: @article.url,
-        api_key: "mock_api_key",
-        cse_id: "mock_cse_id"
-      )
+      google = GoogleSearch.new(query: @article.keyword, url: @article.url, api_key: "mock_api_key", cse_id: "mock_cse_id")
       @article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
       redirect_to @article, notice: t("success.article_was_successfully_updated")
     else

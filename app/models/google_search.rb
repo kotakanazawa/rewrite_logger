@@ -10,6 +10,18 @@ class GoogleSearch
     @cse_id = cse_id
   end
 
+  def self.fetch_daily_rankings
+    Article.find_each do |article|
+      google = GoogleSearch.new(
+        query: article.keyword,
+        url: article.url,
+        api_key: ENV["GOOGLE_API_KEY"],
+        cse_id: ENV["GOOGLE_CSE_ID"]
+      )
+      article.rankings.create(ranking: google.fetch_ranking, ranked_on: Date.today)
+    end
+  end
+
   def fetch_ranking
     if ranked_in?
       google_rankings.index(@url) + 1
