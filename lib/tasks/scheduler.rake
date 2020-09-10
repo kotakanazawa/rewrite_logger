@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "#{Rails.root}/config/environment"
 
 namespace :scheduler do
