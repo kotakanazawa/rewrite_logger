@@ -12,15 +12,15 @@ table
     tr
       th = Article.human_attribute_name(:id)
       th = Article.human_attribute_name(:keyword)
-      - (@prev_month..@today).each do |date|
-        th = date
+      - (@start_date..@today).each do |date|
+        th = l date, format: :sm
 
   tbody
       - @articles.each do |article|
         tr
           td = article.id
           td = link_to article.keyword, article_path(article)
-          - (@prev_month..@today).each do |date|
+          - (@start_date..@today).each do |date|
             - if article.has_ranking?(date)
               td = article.fetch_ranking(date)
             - else
