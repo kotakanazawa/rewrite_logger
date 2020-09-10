@@ -10,9 +10,8 @@ class GoogleSearch
     @cse_id = cse_id
   end
 
-  def self.create_daily_rankings
-    articles = Article.all
-    articles.each do |article|
+  def self.fetch_daily_rankings
+    Article.find_each do |article|
       google = GoogleSearch.new(
         query: article.keyword,
         url: article.url,
