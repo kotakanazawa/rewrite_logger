@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = current_user.articles
     @today = Date.current
-    @prev_month = Date.current.ago(14.days).to_date
+    @start_date = Date.current.ago(14.days).to_date
   end
 
   def show
