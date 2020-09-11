@@ -6,10 +6,17 @@
         - @article.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :keyword
-    = f.text_field :keyword
-  .actions = f.submit
+  .form__items
+    .form__items-inner
+      .form-item
+        = f.label :url
+        = f.text_field :url, class: "form-item__text-input"
+      .form-item
+        = f.label :keyword
+        = f.text_field :keyword, class: "form-item__text-input"
+      .form-actions
+        ul.form-actions__items
+          li.form-actions_item
+            = f.submit "登録", class: "btn btn--primary btn--lg"
+          li.form-actions_item--cancel
+            = link_to "やめる", articles_path, class: "btn btn--secondary btn--md"

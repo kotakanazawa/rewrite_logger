@@ -5,16 +5,16 @@
   align-items: center;
   border-radius: 4px;
   user-select: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   text-align: center;
   transition: .3s;
   margin-top: .5rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
-  // &--full {
-  //   @extend .btn;
-  //   // width: 100%;
-  // }
+  margin-right: .5rem;
+  &--full {
+    @extend .btn;
+    width: 100%;
+  }
 }
 
 .btn--sm {
@@ -38,6 +38,7 @@
 .btn--primary {
   color:#272343;
   background-color: #ffd803;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
   &:hover {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
   }

@@ -1,0 +1,31 @@
+.form__items {
+  max-width: 25rem;
+}
+
+.form-item__inner {
+}
+
+.form-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item__text-input {
+  border: 1px solid #272343;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.form-actions__items {
+  list-style-type: none;
+  display: flex;
+}
+
+.form-actions__item {
+
+}
+
+.form-actions__item--cancel {
+  // padding: 0 .5rem;
+}

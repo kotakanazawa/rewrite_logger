@@ -40,3 +40,7 @@ a {
 img {
   max-width: 100%;
 }
+
+input[type=text]:focus, textarea:focus {
+  outline: none;
+}
