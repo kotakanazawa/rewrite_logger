@@ -1,0 +1,6 @@
+header.header
+  .container
+    h1.header__title
+      = link_to "Rewrite-Log", root_path
+    - if user_signed_in?
+      = link_to 'ユーザー名'
