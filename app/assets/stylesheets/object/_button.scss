@@ -1,4 +1,4 @@
-.btn {
+%btn {
   font-weight: 600;
   display: inline-flex;
   justify-content: center;
@@ -11,10 +11,10 @@
   transition: .3s;
   margin-top: .5rem;
   margin-right: .5rem;
-  &--full {
-    @extend .btn;
-    width: 100%;
-  }
+  // &--full {
+  //   @extend .btn;
+  //   width: 100%;
+  // }
 }
 
 .btn--sm {
@@ -36,7 +36,8 @@
 }
 
 .btn--primary {
-  color:#272343;
+  @extend %btn;
+  color: #272343;
   background-color: #ffd803;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
   &:hover {
@@ -45,6 +46,7 @@
 }
 
 .btn--secondary {
+  @extend %btn;
   color: #444444;
   background-color: white;
   border: 1px solid #d8d8d8;
@@ -55,6 +57,7 @@
 }
 
 .btn--danger {
+  @extend %btn;
   color: white;
   border: 1px solid #FF5555;
   background-color: #F0514F;
