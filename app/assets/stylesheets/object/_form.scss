@@ -11,10 +11,10 @@
   flex-direction: column;
 }
 
-
 .form-actions__items {
   list-style-type: none;
   display: flex;
+  justify-content: center;
 }
 
 .form-item__text-input {
@@ -22,6 +22,7 @@
   padding: 3px 6px;
   border-radius: 4px;
   background-color: #fff;
+  width: 100%;
 }
 
 .form-item__textarea {
@@ -32,6 +33,17 @@
   height: 12rem;
 }
 
+.form-item__label--block {
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.form-item__remember-me {
+  font-size: .85rem;
+  margin-right: .3rem;
+}
 
 .form-actions__item {
 
