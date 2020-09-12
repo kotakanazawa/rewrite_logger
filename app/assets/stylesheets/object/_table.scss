@@ -12,3 +12,8 @@
     border: 1px solid #ccc;
   }
 }
+
+.table__log {
+  @extend .table;
+  width: 50%;
+}

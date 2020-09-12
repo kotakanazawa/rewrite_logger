@@ -11,17 +11,27 @@
   flex-direction: column;
 }
 
-.form-item__text-input {
+
+.form-actions__items {
+  list-style-type: none;
+  display: flex;
+}
+
+.form-item__text-input, {
   border: 1px solid #272343;
   padding: 3px 6px;
   border-radius: 4px;
   background-color: #fff;
 }
 
-.form-actions__items {
-  list-style-type: none;
-  display: flex;
+.form-item__textarea {
+  border: 1px solid #272343;
+  padding: 3px 6px;
+  border-radius: 4px;
+  background-color: #fff;
+  height: 12rem;
 }
+
 
 .form-actions__item {
 

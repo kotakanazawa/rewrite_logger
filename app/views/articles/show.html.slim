@@ -1,35 +1,30 @@
-h2 記事詳細
+h2.heading-2 記事詳細
 
-p= @article.id
+h4 = Article.human_attribute_name(:url)
+p = @article.url
 
-h3= Article.human_attribute_name(:url)
-p= @article.url
+h4 = Article.human_attribute_name(:keyword)
+p = @article.keyword
 
-h3= Article.human_attribute_name(:keyword)
-p= @article.keyword
-
-h2 検索順位
+h3.heading-3 検索順位
 
 = ranking_chart(@rankings)
 
-=> link_to t("link.edit"), edit_article_path(@article)
-'|
-=< link_to t("link.back"), articles_path
+=> link_to "記事を編集", edit_article_path(@article)
+
 
 
 - if @article.logs.present?
-  h2 ログ
-  table
+  h3.heading-3 変更ログ
+  table.table__log
     thead
       tr
         th = Log.human_attribute_name(:created_at)
         th = Log.human_attribute_name(:title)
-
     tbody
       - @logs.each do |log|
         tr
           td = l log.created_at
           td = link_to log.title, log_path(log)
 
-= link_to t("link.new_log"), new_article_log_path(@article)
-= link_to t("link.back"), articles_path
+= link_to t("link.new_log"), new_article_log_path(@article), class: "btn--primary btn--lg"
