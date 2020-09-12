@@ -1,11 +1,13 @@
-h1 ログの詳細
+h2.heading-2 ログの詳細
 
-h2 タイトル
+h4 = Log.human_attribute_name(:title)
 p = @log.title
 
-h2 ログ内容
+h4 = Log.human_attribute_name(:description)
 p = @log.description
 
-= link_to t("link.edit"), edit_log_path(@log)
-= link_to t("link.destroy"), @log, method: :delete, data: { confirm: t("confirm.are_you_sure") }
-= link_to t("link.back"), article_path(@log.article_id)
+= link_to t("link.edit"), edit_log_path(@log), class: "btn--primary btn--lg"
+
+= link_to t("link.destroy"), @log, method: :delete, data: { confirm: t("confirm.are_you_sure") }, class: "btn--danger btn--lg"
+
+= link_to t("link.back"), article_path(@log.article_id), class: "link--back"

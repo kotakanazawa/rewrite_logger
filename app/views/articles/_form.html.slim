@@ -16,6 +16,10 @@
     .form-actions
       ul.form-actions__items
         li.form-actions_item
-          = f.submit "登録", class: "btn--primary btn--lg"
+          - if article.new_record?
+            = f.submit "登録", class: "btn--primary btn--lg"
+          - else
+            = f.submit "変更", class: "btn--primary btn--lg"
+            = link_to t("link.destroy"), article, method: :delete, data: { confirm: t("confirm.are_you_sure") }, class: "btn--danger btn--lg"
         li.form-actions_item--cancel
-          = link_to "やめる", articles_path, class: "btn--secondary btn--md"
+          = link_to "やめる", :back, class: "btn--secondary btn--md"
