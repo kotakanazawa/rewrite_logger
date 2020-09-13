@@ -9,7 +9,6 @@ p = @article.keyword
 = link_to "記事を編集", edit_article_path(@article)
 
 h3.heading-3 検索順位
-
 = ranking_chart(@rankings)
 
 - if @article.logs.present?

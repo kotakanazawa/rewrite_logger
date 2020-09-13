@@ -63,7 +63,7 @@ RSpec.describe "記事管理", type: :system do
         visit new_article_path
         fill_in "URL", with: article_url
         fill_in "キーワード", with: article_keyword
-        click_button "登録する"
+        click_button "登録"
       end
 
       context "新規作成画面でURLとキーワードを入力したとき" do
@@ -81,10 +81,8 @@ RSpec.describe "記事管理", type: :system do
         let(:article_keyword) { "" }
 
         it "エラーとなる" do
-          within "#error_explanation" do
-            expect(page).to have_content "URLを入力してください"
-            expect(page).to have_content "キーワードを入力してください"
-          end
+          expect(page).to have_content "URLを入力してください"
+          expect(page).to have_content "キーワードを入力してください"
         end
       end
     end
