@@ -11,9 +11,5 @@ html
   body
     = render "header"
     .container
-      p.notice
-        = notice
-      p.alert
-        = alert
-      - if user_signed_in?
+      = render "flash"
       = yield

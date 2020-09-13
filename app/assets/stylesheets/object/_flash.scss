@@ -1,0 +1,18 @@
+.flash {
+  padding: .5rem 0;
+}
+
+.flash__message {
+  text-align: center;
+  font-size: .9rem;
+}
+
+.flash--notice {
+  background-color: #46a91c;
+  color: white;
+}
+
+.flash--alert {
+  background-color: #d64242;
+  color: white;
+}
