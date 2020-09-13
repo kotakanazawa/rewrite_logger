@@ -1,2 +1,9 @@
-h1 Welcome#toc
-p Find me in app/views/welcome/toc.html.slim
+
+.container
+  .welcome-page
+    header.welcome-page__header
+      h1 利用規約
+
+    .welcome-page__content
+      .tos.is-long-text
+        = render "tos_text"
