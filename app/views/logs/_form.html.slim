@@ -1,8 +1,4 @@
-- if log.errors.present?
-  ul#error_explanation
-    - log.errors.full_messages.each do |message|
-      li = message
-
+= render "error", object: log
 = form_with model: [article, log], local: true do |f|
   .form__items
     .form-item

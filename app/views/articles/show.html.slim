@@ -6,11 +6,11 @@ p = @article.url
 h4 = Article.human_attribute_name(:keyword)
 p = @article.keyword
 
+= link_to "記事を編集", edit_article_path(@article)
+
 h3.heading-3 検索順位
 
 = ranking_chart(@rankings)
-
-= link_to "記事を編集", edit_article_path(@article)
 
 - if @article.logs.present?
   h3.heading-3 変更ログ
