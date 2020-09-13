@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Article < ApplicationRecord
-  validates :url, presence: true
+  validates :url, presence: true, format: /\A#{URI::regexp(%w(http https))}\z/
   validates :keyword, presence: true
 
   belongs_to :user
