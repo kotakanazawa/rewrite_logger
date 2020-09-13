@@ -1,11 +1,11 @@
 .header {
-  background-color: #FFFFFF;
-}
-
-.header__title {
-  font-size: 1.4rem;
-  a {
-    text-decoration: none;
+  background-color: #272343;
+  &__title {
+    font-size: 1.4rem;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 }
 
@@ -14,6 +14,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  a {
+    color: #fff;
+  }
 }
 
 @media (max-width: 480px) {

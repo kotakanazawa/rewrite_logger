@@ -3,12 +3,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @articles = current_user.articles
-    @today = Date.current
-    @start_date = Date.current.ago(14.days).to_date
-  end
-
   def show
     @logs = @article.logs.order(created_at: :desc)
     @rankings = Article.chart(@article)

@@ -1,0 +1,47 @@
+.welcome
+  .container
+    .firstview
+      .firstview__items
+        .firstview__content
+          h1.firstview__title
+            | リライトログ
+          h2.firstview__subtitle
+            | ブロガー向け検索順位記録アプリ
+          .firstview__stamps
+            .firstview__signup
+              = link_to "登録(無料)", new_user_registration_path, class: "btn--primary btn--lg"
+            .firstview__signup
+              = link_to "ログイン", new_user_session_path, class: "btn--login btn--lg"
+        .firstview__image
+          = image_tag "seo.png"
+
+  .welcome__section
+    .welcome__features
+      .welcome-feature
+        .welcome-feature__image
+          = image_tag "chart.svg"
+        .welcome-feature__body
+          h1.welcome-feature__header
+            | 検索順位を自動で記録
+          p.welcome-feature__description
+            | 検索順位をチェックしたいURLとキーワードを登録するだけ。自動で毎日検索順位を記録します。
+      .welcome-feature
+        .welcome-feature__image
+          = image_tag "memo.svg"
+        .welcome-feature__body
+          h1.welcome-feature__header
+            | リライトの内容を記録
+            br.welcome-feature__break
+          p.welcome-feature__description
+            | リライト後に変更内容を記録(手動)。「なぜリライトをしたのか？なにをリライトしたのか？」をすべて保存できます。
+      .welcome-feature
+        .welcome-feature__image
+          = image_tag "idea.svg"
+        .welcome-feature__body
+          h1.welcome-feature__header
+            | リライトの正しい効果測定
+            br.welcome-feature__break
+          p.welcome-feature__description
+            | リライトと検索順位の変動をチェックすることで、「どんなリライトが効果的だったのか」を知ることができます。
+
+= render "footer"
