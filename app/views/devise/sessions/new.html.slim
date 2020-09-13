@@ -1,0 +1,27 @@
+
+.container
+  .auth-form
+    header.auth-form__header
+      h2.auth-form__title ログイン
+      .auth-form__body
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form__items--block
+            .form-item--block
+              = f.label :email, class: "form-item__label--block"
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-item__text-input"
+
+            .form-item--block
+              = f.label :password, class: "form-item__label--block"
+              = f.password_field :password, autocomplete: "current-password", class: "form-item__text-input"
+
+            .form-item--block
+              - if devise_mapping.rememberable?
+                = f.check_box :remember_me, class: "form-item__remember-me"
+                = f.label :remember_me
+
+            .form-actions
+              ul.form-actions__items
+                li.form-actions__item
+                  = f.submit t('.sign_in'), class: "btn--primary btn--lg"
+
+        = render "devise/shared/links"

@@ -5,6 +5,7 @@ require "rails_helper"
 RSpec.describe "ログ管理", type: :system do
   let(:user_a) { FactoryBot.create(:user, name: "ユーザーA", email: "a@example.com") }
   let!(:article_a) { FactoryBot.create(:article, user: user_a) }
+  let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
   let!(:log_a) { FactoryBot.create(:log, title: "テストログ1", description: "テストログ詳細1", article: article_a) }
   let!(:log_b) { FactoryBot.create(:log, title: "テストログ2", description: "テストログ詳細2", article: article_a) }
 
@@ -51,10 +52,10 @@ RSpec.describe "ログ管理", type: :system do
 
       before do
         visit article_path(article_a)
-        click_link "ログを作成する"
+        click_link "ログを作成"
         fill_in "タイトル", with: log_title
         fill_in "変更内容", with: log_description
-        click_button "登録する"
+        click_button "登録"
       end
 
       context "新規作成画面でタイトルと変更内容を入力したとき" do
@@ -72,10 +73,8 @@ RSpec.describe "ログ管理", type: :system do
         let(:log_description) { "" }
 
         it "エラーとなる" do
-          within "#error_explanation" do
-            expect(page).to have_content "タイトルを入力してください"
-            expect(page).to have_content "変更内容を入力してください"
-          end
+          expect(page).to have_content "タイトルを入力してください"
+          expect(page).to have_content "変更内容を入力してください"
         end
       end
     end
@@ -89,7 +88,7 @@ RSpec.describe "ログ管理", type: :system do
       click_link "編集"
       fill_in "タイトル", with: "ログタイトル編集済み"
       fill_in "変更内容", with: "ログ変更内容編集済み"
-      click_button "更新する"
+      click_button "変更"
     end
 
     it "ログを編集できる" do

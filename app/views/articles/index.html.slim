@@ -1,16 +1,8 @@
-h1 検索順位一覧
+h2.heading-2 検索順位一覧
 
-p
-  | email:
-  = current_user.email
-p
-  | user_id:
-  = current_user.id
-
-table
+table.table
   thead
     tr
-      th = Article.human_attribute_name(:id)
       th = Article.human_attribute_name(:keyword)
       - (@start_date..@today).each do |date|
         th = l date, format: :sm
@@ -18,7 +10,6 @@ table
   tbody
       - @articles.each do |article|
         tr
-          td = article.id
           td = link_to article.keyword, article_path(article)
           - (@start_date..@today).each do |date|
             - if article.has_ranking?(date)
@@ -26,6 +17,4 @@ table
             - else
               td = "-"
 
-br
-
-= link_to t("link.new_article"), new_article_path
+= link_to t("link.new_article"), new_article_path, class: "btn btn--primary btn--lg"

@@ -7,11 +7,9 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
-    - if user_signed_in?
-      = link_to 'ログアウト', destroy_user_session_path, method: :delete
-    = yield
+    = render "header"
+    .container
+      = render "flash"
+      = yield

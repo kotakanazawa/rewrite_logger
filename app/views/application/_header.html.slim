@@ -1,0 +1,7 @@
+header.header
+  .container
+    h1.header__title
+      = link_to "Rewrite-Log", root_path
+    nav.header-nav
+      - if user_signed_in?
+        = link_to "ユーザー設定", edit_user_registration_path

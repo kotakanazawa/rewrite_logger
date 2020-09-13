@@ -1,0 +1,46 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "游ゴシック体", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", Sans-Serif;
+  line-height: 1.7;
+  background-color: #EAEAEA;
+  color: #2d334a;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+  header > & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    @media (max-width: 480px) {
+      padding: 0 2%;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 0;
+  }
+}
+
+a {
+  color: #272343;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type=text]:focus, textarea:focus {
+  outline: none;
+}
