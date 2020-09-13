@@ -73,8 +73,8 @@ RSpec.describe "ログ管理", type: :system do
         let(:log_description) { "" }
 
         it "エラーとなる" do
-            expect(page).to have_content "タイトルを入力してください"
-            expect(page).to have_content "変更内容を入力してください"
+          expect(page).to have_content "タイトルを入力してください"
+          expect(page).to have_content "変更内容を入力してください"
         end
       end
     end
