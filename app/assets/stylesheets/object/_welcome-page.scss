@@ -34,56 +34,6 @@
   margin: 3.5rem 0;
 }
 
-.firstview {
-  margin-bottom: 3.5rem;
-}
-
-.firstview__items {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media(max-width: 960px) {
-    flex-direction: column;
-  }
-}
-
-.firstview__stamps {
-  display: flex;
-}
-
-.firstview__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  @media(max-width: 960px) {
-    margin-bottom: 3rem;
-    width: 100%;
-  }
-}
-
-.firstview__title {
-  // font-family: "American Typewriter";
-  line-height: 1.2;
-  font-size: 3rem;
-  margin-bottom: .2rem;
-}
-
-.firstview__subtitle {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  @media(max-width: 480px) {
-    line-height: 1.4;
-  }
-}
-
-.firstview__image {
-  width: 50%;
-  @media(max-width: 960px) {
-    width: 100%;
-  }
-}
-
 .welcome__section {
   padding: 2rem 0;
 }

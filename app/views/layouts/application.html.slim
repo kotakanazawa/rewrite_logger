@@ -9,7 +9,8 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render "header"
+    - if user_signed_in?
+      = render "header"
     .container
       = render "flash"
       = yield
