@@ -4,12 +4,4 @@ header.header
       = link_to "Rewrite-Log", root_path
     nav.header-nav
       - if user_signed_in?
-        .header-nav_items
-          .header-nav__item
-            ul.header-dropdown__items
-              / li.header-dropdown__item
-              /   = link_to "username"
-              li.header-dropdown__item
-                = link_to "ユーザー設定", edit_user_registration_path
-              li.header-dropdown__item
-                = link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "本当によろしいですか？"}
+        = link_to "ユーザー設定", edit_user_registration_path

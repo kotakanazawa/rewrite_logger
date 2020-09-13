@@ -37,5 +37,6 @@
                   = f.submit t('.update'), class: "btn--primary btn--lg"
 
           .auth__links
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: t('.are_you_sure')}
             = link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete
             = link_to t('devise.shared.links.back'), :back

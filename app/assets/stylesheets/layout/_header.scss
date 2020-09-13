@@ -8,3 +8,16 @@
     text-decoration: none;
   }
 }
+
+.header-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    position: static;
+  }
+}
