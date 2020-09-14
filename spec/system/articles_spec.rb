@@ -18,8 +18,8 @@ RSpec.describe "記事管理", type: :system do
     @google_search = GoogleSearch.new(
       query: "ハンターハンター",
       url: "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER",
-      api_key: "mock_api_key",
-      cse_id: "mock_cse_id"
+      api_key: ENV["GOOGLE_API_KEY"],
+      cse_id: ENV["GOOGLE_CSE_ID"]
     )
   end
 

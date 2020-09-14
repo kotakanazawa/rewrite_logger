@@ -8,8 +8,8 @@ RSpec.describe GoogleSearch, type: :model do
     @google_search = GoogleSearch.new(
       query: "ハンターハンター",
       url: "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER",
-      api_key: "mock_api_key",
-      cse_id: "mock_cse_id"
+      api_key: ENV["GOOGLE_API_KEY"],
+      cse_id: ENV["GOOGLE_CSE_ID"]
     )
   end
 
@@ -25,8 +25,8 @@ RSpec.describe GoogleSearch, type: :model do
         google_search = GoogleSearch.new(
           query: "ハンターハンター",
           url: "https://hoge.com",
-          api_key: "mock_api_key",
-          cse_id: "mock_cse_id"
+          api_key: ENV["GOOGLE_API_KEY"],
+          cse_id: ENV["GOOGLE_CSE_ID"]
         )
         expect(google_search.fetch_ranking).to eq 51
       end
