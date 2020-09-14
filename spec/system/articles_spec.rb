@@ -14,6 +14,8 @@ RSpec.describe "記事管理", type: :system do
     fill_in "パスワード",	with: login_user.password
     click_button "ログイン"
 
+    WebMock.allow_net_connect!
+
     stub_google!
     @google_search = GoogleSearch.new(
       query: "ハンターハンター",
@@ -57,35 +59,34 @@ RSpec.describe "記事管理", type: :system do
   end
 
   describe "記事作成" do
-      let(:login_user) { user_a }
+    let(:login_user) { user_a }
+    before do
+      visit new_article_path
+      fill_in "URL", with: article_url
+      fill_in "キーワード", with: article_keyword
+      click_button "登録"
+    end
 
-      before do
-        visit new_article_path
-        fill_in "URL", with: article_url
-        fill_in "キーワード", with: article_keyword
-        click_button "登録"
-      end
+    context "新規作成画面でURLとキーワードを入力したとき" do
+      let(:article_url) { "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER" }
+      let(:article_keyword) { "ハンターハンター" }
 
-      context "新規作成画面でURLとキーワードを入力したとき" do
-        let(:article_url) { "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER" }
-        let(:article_keyword) { "ハンターハンター" }
-
-        it "正常に登録される" do
-          expect(page).to have_content "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER"
-          expect(page).to have_content "ハンターハンター"
-        end
-      end
-
-      context "新規作成画面でURLとキーワードを入力しなかったとき" do
-        let(:article_url) { "" }
-        let(:article_keyword) { "" }
-
-        it "エラーとなる" do
-          expect(page).to have_content "URLを入力してください"
-          expect(page).to have_content "キーワードを入力してください"
-        end
+      it "正常に登録される" do
+        expect(page).to have_content "https://ja.wikipedia.org/wiki/HUNTER%C3%97HUNTER"
+        expect(page).to have_content "ハンターハンター"
       end
     end
+
+    context "新規作成画面でURLとキーワードを入力しなかったとき" do
+      let(:article_url) { "" }
+      let(:article_keyword) { "" }
+
+      it "エラーとなる" do
+        expect(page).to have_content "URLを入力してください"
+        expect(page).to have_content "キーワードを入力してください"
+      end
+    end
+  end
 
   describe "記事詳細" do
     let(:login_user) { user_a }
