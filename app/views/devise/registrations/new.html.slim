@@ -6,7 +6,7 @@
       .auth-form__body
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           .form__items--block
-            = render "devise/shared/error_messages", resource: resource
+            = render "error", object: resource
             .form-item--block
               = f.label :email, class: "form-item__label--block"
               = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-item__text-input"
@@ -14,7 +14,7 @@
             .form-item--block
               = f.label :password, class: "form-item__label--block"
               - if @minimum_password_length
-                = t('devise.shared.minimum_password_length', count: @minimum_password_length)
+                = "(8文字以上)"
               = f.password_field :password, autocomplete: "new-password", class: "form-item__text-input"
 
             .form-item--block

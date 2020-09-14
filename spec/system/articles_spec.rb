@@ -14,8 +14,6 @@ RSpec.describe "記事管理", type: :system do
     fill_in "パスワード",	with: login_user.password
     click_button "ログイン"
 
-    WebMock.allow_net_connect!
-
     stub_google!
     @google_search = GoogleSearch.new(
       query: "ハンターハンター",
