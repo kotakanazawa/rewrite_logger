@@ -119,6 +119,8 @@ GEM
       signet (~> 0.14)
     groupdate (5.1.0)
       activesupport (>= 5)
+    hanmoto (0.4.0)
+      rails (>= 5.1.0)
     hashdiff (1.0.1)
     httpclient (2.8.3)
     i18n (1.8.5)
@@ -333,6 +335,7 @@ DEPENDENCIES
   factory_bot_rails
   google-api-client (~> 0.34)
   groupdate
+  hanmoto
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg
