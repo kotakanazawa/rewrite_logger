@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe Article, type: :model do
   let(:user_a) { FactoryBot.create(:user) }
-  let!(:article_a) { FactoryBot.create(:article, url: "test_url", keyword: "テストキーワード", user: user_a) }
+  let!(:article_a) { FactoryBot.create(:article, user: user_a) }
   let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
   let!(:ranking_b) { FactoryBot.create(:ranking, ranking: 2, ranked_on: 20200819, article: article_a) }
 
@@ -22,7 +22,7 @@ RSpec.describe Article, type: :model do
       end
 
       it "keywordがnilなら登録できない" do
-        article = FactoryBot.build(:article, url: "test_url", keyword: nil, user: user_a)
+        article = FactoryBot.build(:article, url: "https://testtest_url.com", keyword: nil, user: user_a)
         expect(article).not_to be_valid
       end
     end

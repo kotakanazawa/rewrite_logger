@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe "記事管理", type: :system do
   let(:user_a) { FactoryBot.create(:user, name: "ユーザーA", email: "a@example.com") }
   let(:user_b) { FactoryBot.create(:user, name: "ユーザーB", email: "b@example.com") }
-  let!(:article_a) { FactoryBot.create(:article, url: "test_url", keyword: "テストキーワード", user: user_a) }
+  let!(:article_a) { FactoryBot.create(:article, user: user_a) }
   let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
 
   before do
