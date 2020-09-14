@@ -6,7 +6,7 @@
       .auth-form__body
         = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
           .form__items--block
-            = render "devise/shared/error_messages", resource: resource
+            = render "error", object: resource
 
             .form-item--block
               = f.label :email, class: "form-item__label--block"
