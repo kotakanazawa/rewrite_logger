@@ -8,5 +8,8 @@ footer.footer
           = link_to "プライバシーポリシー", policy_path, class: "footer-nav__link"
     .footer-copyright
       small
-        span.footer-copyright__author Kota Kanazawa
+        span.footer-copyright__author
+          = link_to "Kota Kanazawa", "https://twitter.com/KanazawaKoh", target: "_blank"
+        span.footer-copyright__author
+          = link_to "Github", "https://github.com/kotakanazawa/rewrite_logger", target: "_blank"
         span = Date.today.year
