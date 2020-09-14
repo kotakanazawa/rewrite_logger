@@ -13,8 +13,11 @@ table.table
           td = link_to article.keyword, article_path(article)
           - (@start_date..@today).each do |date|
             - if article.has_ranking?(date)
-              td = article.fetch_ranking(date)
+              td = article.show_ranking(date)
             - else
               td = "-"
 
-= link_to t("link.new_article"), new_article_path, class: "btn btn--primary btn--lg"
+p.str-sm
+  | ※51位以下は圏外と表示されます
+
+= link_to t("link.new_article"), new_article_path, class: "btn--primary btn--lg"

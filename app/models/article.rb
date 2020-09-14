@@ -20,7 +20,12 @@ class Article < ApplicationRecord
     self.rankings.find_by(ranked_on: date)
   end
 
-  def fetch_ranking(date)
-    self.rankings.find_by(ranked_on: date).ranking
+  def show_ranking(date)
+    ranking = self.rankings.find_by(ranked_on: date).ranking
+    if ranking == 51
+      "圏外"
+    else
+      ranking
+    end
   end
 end

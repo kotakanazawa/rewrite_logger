@@ -7,6 +7,7 @@ RSpec.describe Article, type: :model do
   let!(:article_a) { FactoryBot.create(:article, user: user_a) }
   let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
   let!(:ranking_b) { FactoryBot.create(:ranking, ranking: 2, ranked_on: 20200819, article: article_a) }
+  let!(:ranking_51) { FactoryBot.create(:ranking, ranking: 51, ranked_on: 20200821, article: article_a) }
 
   describe "記事の登録" do
     context "urlとkeywordを入力するとき" do
@@ -33,7 +34,8 @@ RSpec.describe Article, type: :model do
       expect(Article.chart(article_a)).to eq(
         {
           "2020-08-20" => 1,
-          "2020-08-19" => 2
+          "2020-08-19" => 2,
+          "2020-08-21" => 51
         })
     end
   end
@@ -42,7 +44,17 @@ RSpec.describe Article, type: :model do
     expect(article_a.has_ranking?(20200820)).to be_truthy
   end
 
-  it "#fetch_ranking" do
-    expect(article_a.fetch_ranking(20200820)).to eq 1
+  describe "#show_ranking" do
+    context "検索順位が50以上のとき" do
+      it "#show_ranking" do
+        expect(article_a.show_ranking(20200820)).to eq 1
+      end
+    end
+
+    context "検索順位が51以下のとき" do
+      it "#show_ranking" do
+        expect(article_a.show_ranking(20200821)).to eq "圏外"
+      end
+    end
   end
 end
