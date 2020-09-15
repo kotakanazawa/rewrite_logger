@@ -22,8 +22,14 @@
   text-align: center;
 }
 
+.vertical-scroll-table {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 12rem;
+  width: 100%;
+}
+
 .table__log {
   @extend .table;
-  width: 80%;
   text-align: center;
 }
