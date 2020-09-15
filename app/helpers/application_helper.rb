@@ -7,6 +7,7 @@ module ApplicationHelper
       max: 50,
       curve: false,
       suffix: "位",
+      discrete: true,
       library: library_options
   end
 
@@ -14,6 +15,9 @@ module ApplicationHelper
     def library_options
       {
         scales: {
+          xAxes: [{
+            hAxis: { format: "MM/dd" }
+          }],
           yAxes: [{
             ticks: { reverse: true }
           }]
