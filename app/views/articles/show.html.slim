@@ -16,15 +16,16 @@ h3.heading-3 検索順位
 - if @article.logs.present?
   h3.heading-3
     | 変更ログ
-  table.table__log
-    thead
-      tr
-        th = Log.human_attribute_name(:created_at)
-        th = Log.human_attribute_name(:title)
-    tbody
-      - @logs.each do |log|
+  .vertical-scroll-table
+    table.table__log
+      thead
         tr
-          td = l log.created_at
-          td = link_to log.title, log_path(log)
+          th = Log.human_attribute_name(:created_at)
+          th = Log.human_attribute_name(:title)
+      tbody
+        - @logs.each do |log|
+          tr
+            td = l log.created_at
+            td = link_to log.title, log_path(log)
 
 = link_to t("link.new_log"), new_article_log_path(@article), class: "btn--primary btn--lg"

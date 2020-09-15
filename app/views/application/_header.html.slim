@@ -1,7 +1,7 @@
 header.header
   .container
     h1.header__title
-      = link_to "Rewrite-Log", root_path
+      = link_to "リライトログ", root_path
     nav.header-nav
       - if user_signed_in?
         = link_to current_user.email, edit_user_registration_path
