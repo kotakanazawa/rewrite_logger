@@ -17,7 +17,7 @@ article_3 = user.articles.create(url: "https://test-protein-osusume.com", keywor
 end
 
 6.times do
-  log_1 = article_1.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
-  log_2 = article_2.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
-  log_3 = article_3.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
+  article_1.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
+  article_2.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
+  article_3.logs.create(title: "テストログです", description: "テストログの詳細です", created_at: Random.rand(start_day..last_day))
 end
