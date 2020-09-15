@@ -1,16 +1,3 @@
-.welcome-page {
-  font-size: 0.95rem;
-  border: 1px solid #ddd;
-  background-color: white;
-  min-height: calc(100vh - 3rem);
-  padding: 1rem 1.875rem 0;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
-}
-
-.welcome-page__header {
-  margin: 1rem 0;
-}
-
 .tos {
   padding-bottom: 1rem;
 }
@@ -77,8 +64,8 @@
 
 .welcome-feature__image {
   margin-bottom: .8rem;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   @media(max-width: 960px) {
     margin-right: 1rem;
     margin-bottom: 0;
