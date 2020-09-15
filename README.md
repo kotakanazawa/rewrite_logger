@@ -17,6 +17,11 @@ $ rails server
 $ rails db:seed
 ```
 
+ローカルで検索順位等のデータをみたいとき。
+
+- email: testtest@example.com
+- pass: testtest
+
 ## テスト
 ヘッドレスブラウザーでテスト
 ```
