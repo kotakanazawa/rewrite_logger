@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  def url_to_link(text)
+    URI.extract(text, ["http", "https"]).uniq.each do |url|
+      text.gsub!(url, "#{url}")
+    end
+    text
+  end
+
   def ranking_chart(rankings)
     line_chart rankings,
       min: 1,

@@ -2,7 +2,7 @@ h2.heading-2 記事詳細
 
 h4.heading-4
   = Article.human_attribute_name(:url)
-p = @article.url
+p = link_to @article.url, target: "_blank", rel: "noopener noreferrer"
 
 h4.heading-4
   = Article.human_attribute_name(:keyword)
