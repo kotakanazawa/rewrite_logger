@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-
   def url_to_link(text)
     URI.extract(text, ["http", "https"]).uniq.each do |url|
       text.gsub!(url, "#{url}")
