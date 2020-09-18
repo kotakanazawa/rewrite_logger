@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   has_many :logs, dependent: :destroy
 
   def self.chart(article)
-    hash = Hash.new(0)
+    hash = {}
     article.rankings.each do |ranking|
       hash[ranking.ranked_on.to_s] = ranking.ranking
     end
