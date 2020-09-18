@@ -11,7 +11,7 @@ $ bin/setup
 $ rails server
 ```
 
-テストデータが生成されない場合。
+テストデータを生成。
 
 ```
 $ rails db:seed
@@ -23,7 +23,8 @@ $ rails db:seed
 - pass: testtest
 
 ## テスト
-ヘッドレスブラウザーでテスト
+
+テスト
 ```
 $ ./bin/test
 ```
