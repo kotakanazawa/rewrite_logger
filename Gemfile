@@ -41,6 +41,7 @@ group :development do
   gem "rubocop-rails"
   gem "rubocop-rspec"
   gem "awesome_print"
+  gem "brakeman", require: false
 end
 
 group :test do
