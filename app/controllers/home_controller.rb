@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def index
     if user_signed_in?
       @articles = current_user.articles
-      @today = Date.current
+      @today = Date.current.prev_day
       @start_date = Date.current.ago(14.days).to_date
     else
       render "welcome/index"
