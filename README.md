@@ -11,7 +11,7 @@ $ .bin/setup
 $ rails server
 ```
 
-ローカルで検索順位等のデータをみたいときのアカウント。
+ローカルでテストデータをみたいときのアカウント情報。
 
 - email: testtest@example.com
 - pass: testtest
