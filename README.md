@@ -7,17 +7,11 @@
 ## Setup
 
 ```
-$ bin/setup
+$ .bin/setup
 $ rails server
 ```
 
-テストデータを生成。
-
-```
-$ rails db:seed
-```
-
-ローカルで検索順位等のデータをみたいとき。
+ローカルで検索順位等のデータをみたいときのアカウント。
 
 - email: testtest@example.com
 - pass: testtest
