@@ -4,7 +4,7 @@ h4 = Log.human_attribute_name(:title)
 p = @log.title
 
 h4 = Log.human_attribute_name(:description)
-p = @log.description
+p = simple_format(h(@log.description), {}, sanitze: false, wrapper_tag: "div")
 
 = link_to t("link.edit"), edit_log_path(@log), class: "btn--primary btn--lg"
 
