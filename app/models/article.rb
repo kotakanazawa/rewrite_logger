@@ -6,7 +6,7 @@ class Article < ApplicationRecord
   belongs_to :user
   has_many :rankings, dependent: :destroy
   has_many :logs, dependent: :destroy
-  OUT_OF_RANK = 51
+  OUT_OF_RANK = 50
 
   def self.chart(article)
     hash = {}
@@ -22,7 +22,7 @@ class Article < ApplicationRecord
 
   def show_ranking(date)
     ranking = self.rankings.find_by(ranked_on: date).ranking
-    if ranking == OUT_OF_RANK
+    if ranking > OUT_OF_RANK
       "圏外"
     else
       ranking
