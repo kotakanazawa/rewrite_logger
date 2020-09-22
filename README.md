@@ -16,7 +16,13 @@ $ rails server
 - email: testtest@example.com
 - pass: testtest
 
-※ローカルの動作環境には PostgreSQL が必要です。
+## ローカルで動かす場合
+
+ローカルの動作環境には PostgreSQL が必要です。
+
+また、Google の Custom Search JSON API を使用して検索順位を取得しています。ローカルで検索順位を取得するには、Google のAPIキーが必要になります。
+
+[Custom Search JSON API  \|  Programmable Search Engine](https://developers.google.com/custom-search/v1/overview)
 
 ## テスト
 
