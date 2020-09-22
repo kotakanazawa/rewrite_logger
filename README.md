@@ -16,6 +16,8 @@ $ rails server
 - email: testtest@example.com
 - pass: testtest
 
+※ローカルの動作環境には PostgreSQL が必要です。
+
 ## テスト
 
 テスト
