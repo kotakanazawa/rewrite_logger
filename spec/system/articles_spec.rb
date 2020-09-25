@@ -9,6 +9,7 @@ RSpec.describe "記事管理", type: :system do
   let!(:ranking_a) { FactoryBot.create(:ranking, article: article_a) }
 
   before do
+    user_a.confirm
     visit user_session_path
     fill_in "メールアドレス",	with: login_user.email
     fill_in "パスワード",	with: login_user.password

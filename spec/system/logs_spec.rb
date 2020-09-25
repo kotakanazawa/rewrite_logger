@@ -10,6 +10,7 @@ RSpec.describe "ログ管理", type: :system do
   let!(:log_b) { FactoryBot.create(:log, title: "テストログ2", description: "テストログ詳細2", article: article_a) }
 
   before do
+    user_a.confirm
     visit user_session_path
     fill_in "メールアドレス",	with: login_user.email
     fill_in "パスワード",	with: login_user.password
