@@ -31,6 +31,10 @@
   line-height: 1.2;
   font-size: 3rem;
   margin-bottom: .2rem;
+  text-indent: -0.7rem;
+  @media(max-width: 960px) {
+    text-indent: 0
+  }
 }
 
 .firstview__subtitle {
