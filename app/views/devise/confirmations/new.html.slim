@@ -1,0 +1,20 @@
+
+.container
+  .auth-form
+    header.auth-form__header
+      h2.auth-form__title
+        = t('.resend_confirmation_instructions')
+      .auth-form__body
+        = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+          .form__items--block
+            = render "devise/shared/error_messages", resource: resource
+
+            .form-item--block
+              = f.label :email, class: "form-item__label--block"
+              = f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-item__text-input"
+            .form-actions
+              ul.form-actions__items
+                li.form-actions__item
+                  = f.submit "アカウント確認メールを再送する", class: "btn--primary btn--lg"
+
+        = render "devise/shared/links"
